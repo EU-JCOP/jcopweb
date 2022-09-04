@@ -58,6 +58,10 @@ footer > section {
   padding: 7px 7px 0px 7px !important;
 }
 
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
