@@ -63,6 +63,14 @@ footer > section {
   height: auto;
 }
 
+.center-img {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 100%;
+  max-width: 600px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
