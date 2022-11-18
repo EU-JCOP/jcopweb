@@ -59,7 +59,7 @@ footer > section {
 }
 
 .responsive-img {
-  width: 100%;
+  width: 40%;
   height: auto;
 }
 
@@ -67,7 +67,6 @@ footer > section {
 	display: block;
   margin-left: auto;
   margin-right: auto;
-	width: 100%;
   max-width: 600px;
 }
 
@@ -519,6 +518,9 @@ footer > section {
     padding-bottom: 5px;
     padding-left: 50px;
     font-size: 0.9rem;
+  }
+  .responsive-img{
+    width: 100%;
   }
 }
 
