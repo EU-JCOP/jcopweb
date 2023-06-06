@@ -1000,3 +1000,8 @@ section {
   height: 48px;
   margin-bottom: 10px;
 }
+
+.blog3-img {
+    margin: auto;
+    display: block;
+}
