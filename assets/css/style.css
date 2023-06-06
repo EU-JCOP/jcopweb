@@ -1002,6 +1002,7 @@ section {
 }
 
 .blog3-img {
+    width: 100%;
     margin: auto;
     display: block;
 }
