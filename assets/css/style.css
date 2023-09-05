@@ -63,8 +63,18 @@ footer > section {
   height: auto;
 }
 
+.responsive-img-80vh {
+  width: 80vh;
+  height: auto;
+}
+
 .responsive-img-50vh {
   width: 50vh;
+  height: auto;
+}
+
+.responsive-img-30vh {
+  width: 30vh;
   height: auto;
 }
 
