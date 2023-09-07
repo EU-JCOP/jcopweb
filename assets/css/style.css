@@ -1040,3 +1040,7 @@ section {
 .width40 {
   width: 40%;
 }
+
+table > tr > td{
+  border: 1px solid black;
+}
