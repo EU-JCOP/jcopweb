@@ -1041,6 +1041,6 @@ section {
   width: 40%;
 }
 
-table > tr > td{
+table > tbody > tr > td{
   border: 1px solid black;
 }
