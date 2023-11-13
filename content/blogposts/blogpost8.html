@@ -1,0 +1,71 @@
+---
+layout: page
+title: Blog Post
+pageHeading: Insights into JCOP's Security Assurance platform
+permalink: /blogposts/blog8.html
+---
+
+<main id="main">
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>{{ page.pageHeading }} </h2>
+        <code>Author: NCSA</code> <br />
+      </div>
+      <div class="col-sm-12">
+        <p>
+          ENISA's latest <a href="https://www.enisa.europa.eu/publications#c3=2020&c3=2023&c3=false&c5=publicationDate&reversed=on&b_start=0&c6=Threat+landscape">Threat Landscape reports reveals</a> a rising trend in sophisticated and targeted attacks in critical sectors like energy and healthcare. Hybrid threats, which combine cyber and physical elements, are also becoming more prevalent.
+        </p>
+        <p>
+          In response to this changing threat landscape, EU Member States, and their Operators of Essential Services (OES) are now required to meet a minimum cybersecurity baseline set of cybersecurity capacities. This obligation is a result of the NIS Directive (<a href="https://eur-lex.europa.eu/eli/dir/2016/1148/oj">2016/1148</a>) and the more recent <a href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2021/689333/EPRS_BRI(2021)689333_EN.pdf">NIS2</a> update. NIS2 enforces stricter requirements on OES and extends these requirements to third parties like subcontractors and service providers. Additionally, it broadens the list of sectors classified as OES from 19 to 35.
+        </p>
+        <p>
+          Nonetheless, managing complex cyber risks on a systemic level remains challenging. This challenge is compounded by increasingly sophisticated and motivated threat actors, many of whom are state-sponsored. These actors carry out persistent, highly targeted attacks on valuable data. They exploit the ever-growing interconnectedness of various systems and networks.
+        </p>
+        <p>
+          A data breach or disruptive cyberattack can cause significant damage not only to the organization but also to its constituents. As a result, implementing strong cybersecurity to protect against these attacks is a major responsibility of government agencies. Here is where the Security Assurance Platform (SAP) comes into the game.
+        </p>
+        <p>
+          The Security Assurance Platform (SAP) is a suite of tools that can help to continuously monitor, assess, and test the security (and privacy, if needed) of an organization and its assets in real-time. It uses custom assessments to monitor and protect the Confidentiality, Integrity, and Availability (CIA) of the information in an organization's cyber ecosystem. SAP provides trustworthy security assessments with certifiable results. Such security assessments can also provide a snapshot of the organization's current security posture, but the threat landscape and its infrastructure are constantly evolving. Consistently monitoring the organization's environment and conducting regular assessments organizations can ensure that are remain aware of any new threats or vulnerabilities. Figure 1 shows the key components of the SAP architecture.
+        </p>
+        <div style="width: 50%; margin-left:auto; margin-right: auto;">
+          <img
+          src="{{ site.baseurl }}/assets/img/blog8-figure1.png"
+          alt="Security Assurance Platform (SAP) Architecture." 
+          />
+        </div>
+        <p><b>Figure 1:</b> Security Assurance Platform (SAP) Architecture.</p>
+        <p>
+          In the context of the JCOP project, the SAP platform will act as the Alerting and reporting component, which could detect and inform the SOC personnel of abnormal or malicious activities that could be further investigated. It will also support Cyber Threat Intelligence (CTI), vulnerability analysis, and some other tests that will be explained in the following paragraphs.
+        </p>
+        <p>
+          SAP is a model-driven platform which implies that it follows established guidelines and criteria for activities such as risk assessment, vulnerability identification, and security control evaluation; For example, the assurance model should specify all assets of the target cyber system to be protected, owners of assets, known threats that may affect the physical or software components of the system, relationships between assets, etc. These models help standardize and streamline the platform's processes, ensuring a consistent and effective approach to cybersecurity assurance.
+        </p>
+        <p>
+          In the JCOP project, the Security Assurance Platform (SAP) will be based on the JCOP's Assurance model and will support Cyber Threat Intelligence (CTI) and, consequently, enhance situational awareness. SAP will achieve this through the following methods:
+        </p>
+        <ol>
+          <li>Programmatically connecting to different systems using appropriate probes (e.g., event captors, test tools, see Figure 1) to obtain the monitoring and test evidence required for assurance and certification assessments.</li>
+          <li>Leveraging penetration testing approaches and vulnerability analysis combined with runtime monitoring and dynamic runtime testing to ensure the correct and effective operation of security controls.</li>
+          <li>Assessing the correctness and effectiveness of implemented system security controls through operations based on models that determine the operational evidence to be captured from systems and how it should be assessed (e.g., what conditions it should satisfy).</li>
+          <li>Conducting runtime assessments of temporal event patterns and rules that can express signature or anomaly-based patterns.</li>
+          <li>CTI Assessments, allowing the contextualisation of CTI information aggregated by <a href="https://github.com/OpenCTI-Platform/opencti">OpenCTI</a>, through their correlation with properties stored within the asset model & existing assessment results (e.g., vulnerability assessments)</li>
+          <li>Hybrid Assessments, combing two or more assessments from above, and enabled through CRISES, a pipelined, query-type language developed by SPHYNX (allowing for the definition of arbitrary risk models for the propagation of assessments produced by SAP's assessments and also allowing the execution of a hybrid analysis, i.e., an analysis that combines two or more of SAP's assessments).</li>
+        </ol>
+        <p>
+          A sample of an <a href="https://nvd.nist.gov/">SAP NVD</a> assessment results screen is shown in Figure 2. On the left side, the user is being presented with the basic information of the assessment such as a brief description, the project it belongs to, its creator, the date it was last updated, the tool/service that is being used, the security properties it checks, its status, the involved assets, and a brief description of the assessment profile. Some key statistics and other information are provided to the user in the form of charts and graphs (e.g., distribution of findings by severity, most vulnerable assets). Further below (right side of Figure 2), the user can see individual assessment results (findings), with some general parameters such as the asset it involves, the security property, the normalized likelihood, an initial detection timestamp (if applicable), the time it was last checked and the time it ceased to exist (if applicable).
+        </p>
+        <div style="width: 50%; margin-left:auto; margin-right: auto;">
+          <img
+          src="{{ site.baseurl }}/assets/img/blog8-figure2.png"
+          alt="Sample of an assessment results screen (in this case NVD assessment) within the SAP front end (overview left, detailed findings right)." 
+          />
+        </div>
+        <p><b>Figure 2:</b> Sample of an assessment results screen (in this case NVD assessment) within the SAP front end (overview left, detailed findings right).</p>
+        <p>
+          In summary, the Security Assurance platform (SAP) is an integral component of JCOP's cybersecurity infrastructure, facilitating CTI and situational awareness by conducting CTI Assessments, penetration testing approaches, vulnerability analysis, dynamic runtime testing, and real-time monitoring. It operates based on predefined models and assesses temporal event patterns and rules to ensure the correctness and effectiveness of security controls, thereby enhancing the overall cybersecurity posture of the organization.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
