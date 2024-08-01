@@ -1,78 +1,178 @@
 ---
 layout: page
 title: Blog Post
-pageHeading: How NIS and NIS2 will enhance JCOP operations
+pageHeading: OASIS CACAO v2.0 standard is released
 permalink: /blogposts/blog10.html
 ---
 
 <main id="main">
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>{{ page.pageHeading }} </h2>
-        <code>Author: DSA</code> <br />
-      </div>
-      <div class="col-sm-12">
-        <div style="width: 80%; margin-left:auto; margin-right: auto;">
-          <img
-          src="{{ site.baseurl }}/assets/img/blog10-figure1.png"
-          alt="JCOP and NIS2 Directive"
-          class="responsive-img-80vh" 
-          />
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ page.pageHeading }}</h2>
+                <code>Author:  Bret Jordan, Vasileios Mavroeidis (UiO), Luca Morgese, and Allan Thomson</code> <br />
+            </div>
+            <div class="col-sm-12">
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig1.png"
+                        alt="CACAO Logo"
+                        class="responsive-img-80vh" />
+                </div>
+                <h3>Introduction</h3>
+                <p>
+                    Organizational cyber security has never been more under attack than in today's world. With the introduction of the OASIS Collaborative Automated Course of Actions Operations (CACAO) Version 2.0 standard, security organizations have a new and formidable toolkit in their ability to orchestrate and collaborate using fully automatable security playbooks to respond to today's cyber threats. 
+                </p>
+                <p>
+                    Read on to learn more about how CACAO can help defend your organization better.
+                </p>
+                <h3>The New Standard for Security Playbooks</h3>
+                <p>
+                    CACAO is a standardized framework for orchestrating and automating course-of-action playbooks in cybersecurity. It streamlines the creation, execution, and sharing of playbooks, making it easier for security teams to respond to incidents, mitigate threats, and protect their networks. CACAO offers a modular and extensible approach to playbook development, ensuring that it can adapt to the diverse needs of different organizations.
+                </p>
+                <p>
+                    CACAO focuses on empowering IT/Security organizations to design and orchestrate security activities. These range from traditional activities like intrusion detection; through security event triage, to determining relevant steps to counter a threat; and enforce mitigation and incident response procedures.
+                </p>
+                <p>
+                    Moreover, it enables more advanced techniques that use playbooks across various use cases that organizations may employ or want to address, such as performing attack emulations as part of red team activities, utilizing threat deception techniques to engage with active threats against the organization, or even ensuring policy and regulatory compliance.
+                </p>
+                <p>
+                    The following section highlights some of the key aspects of how CACAO Playbooks are designed.
+                </p>
+                <h3>
+                    Key Technology of CACAO
+                </h3>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig2.jpeg"
+                        alt="Key components of CACAO."
+                        class="responsive-img-80vh" />
+                </div>
+                <h4>Organizing and Searching Playbooks: Metadata</h4>
+                <p>
+                    Metadata is a crucial and powerful component of CACAO, allowing for the efficient categorization and searchability of playbooks. It includes information such as the operational roles a playbook performs, descriptions of its activities, and the complexity of workflow steps encapsulated. For example, a playbook may contain workflow steps that are simple sequencing or they may contain control flows that require the orchestration system to handle the typical logic that programs require. This metadata helps organizations find relevant playbooks quickly and accordingly tailor them to their specific requirements.
+                </p>
+                <h4>Defining the process, logic and knowledge within a playbook: Workflow Steps</h4>
+                <p>
+                    CACAO playbooks are structured as workflows, composed of a dictionary of action steps to be performed sequentially or in parallel while also staying flexible, allowing branching with other CACAO playbooks (modular approach), and incorporating different types of conditional logic (e.g., if, while, switch) to support even the most advanced and complex scenarios and requirements.
+                </p>
+                <h4>
+                    Connecting the playbook steps to systems, people and their targets: Agents and Targets
+                </h4>
+                <p>
+                    In CACAO, the agent is the entity responsible for executing actions, while the target is the recipient of those actions. Agents execute action steps containing commands against targets. The design emphasizes modularity and reusability, allowing organizations to define agents and targets once, reference them in multiple playbooks, or reuse them within a playbook. This approach provides flexibility on how action steps and their underlying commands will be executed by, or against, for example, an individual, group, organization, devices and equipment, or in a hybrid manner.
+                </p>
+                <h3>
+                    Additional Key Features of CACAO
+                </h3>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig3.png"
+                        alt="1. Modularity & Extensibility."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>
+                    1. Recognizing that cybersecurity organizations and their technologies can span a large ecosystem that is constantly evolving, CACAO was designed to be both modular and extensible. 
+                </p>
+                <p>
+                    Organizations can be responsible for specific areas of technology and their respective playbooks. Those playbooks can be combined with other organization's playbooks for specific threats or general process implementation that larger organizations typically follow when responding to incidents (also known as standard operating procedures - SOPs). In many respects how the IT/Security organization is defined and operating is set; however, CACAO playbooks can be easily mapped to that organizational fit, without requiring changes to the organization or how they perform their automation. With CACAO, organizations now have standardized and fully interoperable playbooks that can provide significant improvements to their operational processes within the organization and externally if the team is collaborating with other organizations.
+                </p>
+                <p>
+                    CACAO already includes a comprehensive set of integrations for a large variety of commands and toolsets*. However, organizations can also adapt CACAO to incorporate new tools, proprietary systems, or evolving industry standards. We defined an extension mechanism that is now the basis for <a href="https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.pdf">STIX</a> and CACAO Extensions that can be applied at the playbook, step, or command level, providing flexibility for organizations to customize their orchestration.
+                </p>
+                <p>
+                    * See <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.html#_Toc152256488">CACAO Specification Section 5</a> for details.
+                </p>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig4.png"
+                        alt="2. Ensuring Playbook Integrity."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>
+                    2. Integrity and trust are essential in the world of cybersecurity. CACAO addresses this need by incorporating digital signatures into playbooks to support the ability for them to be signed and countersigned. CACAO's signature mechanism (<a href="https://www.itu.int/rec/T-REC-X.590-202310-P">JSON signature scheme</a>), has been submitted to the UN's ITU-T, which was standardized as <a href="https://www.itu.int/rec/T-REC-X.590-202310-P">X.590</a>. It is now being used in CACAO, assuring authenticity and ensuring integrity across playbooks and helping organizations validate their sources and track changes to playbooks over time.
+                </p>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig5.png"
+                        alt="3. Integrating Cyber Threat Intelligence (CTI) with Orchestration."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>
+                    3. CACAO connects with the Structured Threat Information eXpression (STIX) Version 2.1 standard, ensuring interoperability and information sharing between cyber threat intelligence and incident response. CACAO uses the same identifiers, versioning mechanism, and core metadata as STIX, enabling organization investments to support both standards easily. This integration allows organizations to leverage their cyber threat intelligence knowledge and apply it directly to their playbooks. Similarly, the synergistic utilization of these two standards can allow CTI to trigger or recommend the execution of specific CACAO playbooks.
+                </p>
+                <h3>
+                    Designing CACAO Playbooks - Key Elements to Consider
+                </h3>
+                <p>
+                    As highlighted above, there are three key aspects to designing a CACAO Playbook that an organization must consider. 
+                </p>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig6.jpeg"
+                        alt="CACAO Playbook Metadata."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>
+                    Metadata enables organizations to assess and evaluate the contents of a playbook and what its operational impact might be. The key parts and some of the properties to consider are:
+                </p>
+                <ul>
+                    <li>
+                        <b>Playbook Type:</b> This property defines the key purpose of the playbook, for example, does it address, threat detection, incident response, threat mitigation, investigation, a combination of the aforementioned, etc.</li>
+                    <li>
+                        Playbook Activities & Playbook Processing: These properties enable organizations to better understand what a playbook does in detail and what features it has implemented such as conditional logic, digital signatures, etc.</li>
+                    <li>
+                        <b>Versioning:</b>Versioning enables organizations to track changes in their playbooks over time and potentially changes in playbooks created by different authors.</li>
+                    <li>
+                        Labels: Labels can be used to index and categorize playbooks by type, organization, and function while enabling many other organizational and trust group specific vocabularies or taxonomies. Labeling can be extremely powerful and effective when organizing playbooks.
+                    </li>
+                </ul>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig7.jpeg"
+                        alt="CACAO Workflow Steps."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>
+                    Workflow Steps are the primary content that defines the playbook and the outcomes expected by executing the steps within it. CACAO provides a rich set of (programming) constructs, offering organizations a great amount of flexibility and comprehensive support for their operational and automation needs.
+                </p>
+                <p>
+                    Steps may include: 
+                </p>
+                <ul>
+                    <li>Sequential: Each step is executed in a simple defined order: step 1, step 2, step 3, step n</li>
+                    <li>Parallel: Each step is executed in parallel: step 1.1, step 1.2, step 1.3, step 1.n
+                    </li>
+                    <li>Conditional: Each step can consider a boolean expression prior to executing the next step, for example, if Condition X is true, then perform step 1.</li>
+                    <li>Loops: Supports repeating steps until a condition is not satisfied, for example, while Condition X is true, then perform step 1.</li>
+                    <li>Action: Supports the specific action to be executed for a given step.</li>
+                </ul>
+                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog10-fig8.jpeg"
+                        alt="CACAO Agents & Targets."
+                        class="responsive-img-80vh" />
+                </div>
+                <p>Two simple examples:</p>
+                <ul>
+                    <li>An agent could be an orchestration system executing an automated command (e.g., HTTP API call) to configure a firewall (in this case - the target).</li>
+                    <li>A human agent executing a manual step (manual command), such as switching off the power to a building's internet connection, which requires network isolation and is impossible to automate without a human override.</li>
+                </ul>
+                <h3>Conclusion</h3>
+                <p>
+                    CACAO provides organizations with a rich set of mechanisms to define security playbooks across their entire organization to handle many different aspects of the security operations lifecycle. For collaborating teams within the organizations or across different organizations, CACAO enables the teams to define and share their defensive tradecraft on many aspects including incidents, threat responses, investigative actions, and security assessments. 
+                </p>
+                <p>
+                    Please check out the CACAO specification <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.html">here</a> and check back in the coming months for our webinar series on CACAO.
+                </p>
+                <h3>
+                    References
+                </h3>
+                <ol>
+                    <li>
+                        <a href="https://www.oasis-open.org/2023/12/06/cacao-security-playbooks-v2-blog/">https://www.oasis-open.org/2023/12/06/cacao-security-playbooks-v2-blog/</a>
+                    </li>
+                </ol>
         </div>
-        <p>
-          The "NIS" stands for the "Network and Information Systems" directive in the European Union (EU)framework, while "NIS2" represents its updated version. Both directives are aimed at bolstering the cybersecurity framework across EU member states, ensuring a high common level of network and information systems security to improve the collective cybersecurity posture.
-        </p>
-        <p>
-          When it comes to a Security Operations Center (SOC), both NIS and NIS2 can be helpful in several aspects:
-        </p>
-        <b>
-          NIS (Network and Information Systems):
-        </b>
-        <ul>
-          <li>
-            Standards & Best Practices: The NIS Directive establishes certain baseline security and incident reporting requirements, which can serve as a foundation for SOCs to build upon.
-          </li>
-          <li>
-            Information Sharing: It encourages information sharing and cooperation at both a national and international level which can enhance the intelligence and threat data that SOCs operate with.
-          </li>
-          <li>
-            Incident Reporting: The directive obligates operators of essential services (OES) and digital service providers (DSP) to report significant incidents, providing SOCs with valuable data regarding the cybersecurity landscape.
-          </li>
-          <li>
-            Improved Preparedness: By mandating the identification and designation of OES, it ensures that SOCs have a better understanding of the critical infrastructure and services they need to protect.
-          </li>
-        </ul>
-        <b>
-          NIS2 (NIS Directive Revision):
-        </b>
-        <ul>
-          <li>
-            Expanded Scope: NIS2 broadens the scope to include more sectors and entities, offering a comprehensive view for SOCs in understanding the critical entities and services under their purpose.
-          </li>
-          <li>
-            Stricter Requirements: With heightened criteria for handling risks and reporting incidents, Security Operations Centers (SOCs) must become more proficient in detecting, addressing, and conveying cybersecurity events.
-          </li>
-          <li>
-            Enforcement and Penalties: NIS2 introduces stricter enforcement and higher penalties, which accentuate the importance of robust SOC operations to ensure compliance and avoid punitive actions.
-          </li>
-          <li>
-            Cybersecurity Framework: It provides a harmonized cybersecurity framework across member states, which helps SOCs in maintaining consistent security protocols, especially in a multi-national operational context.
-          </li>
-          <li>
-            Supply Chain Security:The directive brings attention to the security of supply chains and provider relationships, assisting SOCs in focusing on securing not only their organizations but also their interconnected ecosystems.
-          </li>
-          <li>
-            Supporting Cybersecurity Culture: The regulatory standards set forth by NIS2 can significantly support the development of a cybersecurity culture within organizations, thereby reinforcing SOC activities.
-          </li>
-        </ul>
-        <p>
-          Taking everything into account, it's evident that legal structures are crucial for starting and ensuring the seamless operation of SOCs. Using as a starting point the “Legislative Backing”, having a legal and regulatory framework backing SOCs provides them with the authority and resources to effectively implement and enforce cybersecurity practices. Proceeding with “Enhanced Collaboration”, the directives emphasize the importance of national and cross-border collaboration, potentially allowing SOCs to engage in cooperative efforts and share critical cybersecurity information. Concluding with “Resilience” NIS and NIS2 help in enhancing the overall cybersecurity resilience of the member states and the organizations therein, making sure that the SOCs are well-equipped and legally backed to defend against and respond to cyber incidents.
-        </p>
-        <p>
-          These directives ultimately contribute to shaping a structured and unified approach towards cybersecurity across the European Union, providing SOCs with regulatory, cooperative, and tactical frameworks to enhance their cybersecurity operations.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 </main>
