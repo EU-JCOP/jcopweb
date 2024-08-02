@@ -35,6 +35,7 @@ permalink: /blogposts/blog19.html
                         alt="Advanced Metering Infrastructure Communication. This figure depicts the components and communication flow within the AMI ecosystem, highlighting the role of smart meters and the AMI Headend in data collection and processing."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 1:</b> Advanced Metering Infrastructure Communication. This figure depicts the components and communication flow within the AMI ecosystem, highlighting the role of smart meters and the AMI Headend in data collection and processing.</p>
                 <h3>Current Incident Response Methods and Their Limitations</h3>
                 <p>Despite the importance of AMI, many utilities still rely on manual incident response methods. Studies indicate that 35% of utilities lack a formal incident response plan, and those that do often depend on manual actions by operators and IT personnel. This manual approach is time-consuming and prone to errors, leading to delays in threat detection and response. For example, when smart meter data cannot be transmitted due to network or cybersecurity issues, utilities often revert to traditional metering methods, which are inefficient and labor-intensive.</p>
                 <p>The unavailability of smart meter data can have cascading effects, impacting critical utility services such as energy demand forecasting. This can result in load demand peaks and potential blackouts, further highlighting the need for a robust incident response strategy.</p>
@@ -57,6 +58,8 @@ permalink: /blogposts/blog19.html
                         alt="CACAO Playbook Executed by the ROAR Component. This figure visually represents an example of a CACAO playbook, illustrating how automated responses are structured and executed."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 2:</b> CACAO Playbook Executed by the ROAR Component. This figure visually represents an example of a CACAO playbook, illustrating how automated responses are structured and executed.</p>
+
                 <h3>Implementing Automated Incident Response in AMI:</h3>
                 <h4>Preparation</h4>
                 <p>The first step in implementing an automated incident response plan is preparation. This involves defining the incident response team, establishing communication channels, deploying necessary security controls, and conducting regular training sessions. Utilities should perform periodic risk assessments to identify potential threats and vulnerabilities within the AMI system, ensuring that they are adequately prepared to handle any incidents that may arise.</p>
@@ -71,6 +74,8 @@ permalink: /blogposts/blog19.html
                         alt="Infected Host Isolation in a VLAN Through SDN Switch. This figure demonstrates how infected hosts were isolated in the network, providing a visual representation of the containment process."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 3:</b>Infected Host Isolation in a VLAN Through SDN Switch. This figure demonstrates how infected hosts were isolated in the network, providing a visual representation of the containment process.</p>
+
                 <h3>Eradication and Recovery</h3>
                 <p>Eradication involves removing the threat from the system, which may include reinstalling firmware, resetting configurations, and applying necessary patches. Recovery ensures that the system is restored to full operational capacity, often involving the activation of backup devices to maintain continuous service during the remediation process. Automated playbooks can streamline these steps, reducing downtime and ensuring a thorough and efficient recovery.</p>
                 <h3>Incident Reporting
@@ -90,6 +95,8 @@ permalink: /blogposts/blog19.html
                         alt="AMI Testbed Architecture. This figure provides a clear understanding of the testbed environment used for validation."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 4:</b>AMI Testbed Architecture. This figure provides a clear understanding of the testbed environment used for validation.</p>
+
                 <h4>Automated Response Execution</h4>
                 <p>
                     Detection tools identified the attacks, triggering the execution of CACAO playbooks to automate containment and remediation actions. For instance, during an FDI attack, the system isolated compromised smart meters and reinstalled clean firmware. During a DDoS attack, load balancing and firewall updates mitigated the threat, ensuring continuous service availability.
@@ -100,12 +107,16 @@ permalink: /blogposts/blog19.html
                         alt="Emulated FDI Attack in the Apparent Power. This figure illustrates the impact of the FDI attack on power measurements, showing the data anomalies caused by the attack."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 5:</b>Emulated FDI Attack in the Apparent Power. This figure illustrates the impact of the FDI attack on power measurements, showing the data anomalies caused by the attack.</p>
+                
                 <div style="width: 80%; margin-left: auto; margin-right: auto">
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig7.jpeg"
                         alt="Smart Meter DLMS/COSEM Messages During the DDoS Attack. This figure shows the increase in network messages during the DDoS attack, highlighting the detection and response process."
                         class="responsive-img-80vh" />
                 </div>
+                <p><b>Figure 6:</b>Smart Meter DLMS/COSEM Messages During the DDoS Attack. This figure shows the increase in network messages during the DDoS attack, highlighting the detection and response process.</p>
+
                 <p>
                     The automated response significantly reduced the Mean Time To Respond (MTTR) by 96% for FDI attacks and 98% for DDoS attacks, demonstrating the effectiveness of the proposed approach in enhancing the resilience of AMI systems.
                 </p>

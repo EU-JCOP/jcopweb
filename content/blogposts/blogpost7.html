@@ -6,131 +6,220 @@ permalink: /blogposts/blog7.html
 ---
 
 <main id="main">
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>{{ page.pageHeading }} </h2>
-        <code>Author: NCSA</code> <br />
-      </div>
-      <div class="col-sm-12">
-        <p>
-          Cyber threat intelligence (CTI) refers to collecting, analyzing, and disseminating information about emerging or current cyber threats. It involves gathering and analyzing data from various sources to identify potential threats and vulnerabilities and then using that information to develop strategies for preventing, detecting, and responding to cyber-attacks. CTI has emerged as a vital field of interest in response to the constantly changing and intricate threat environment, and there is growing enthusiasm among both academia and organizations to understand its applications, benefits, data sources, and the transformation of data into actionable intelligence. However, it is still not a clearly defined field compared with other threat Intelligence fields, like defense, law enforcement, and public health.  
-        </p>
-        <p>
-          One of the most common approaches to CTI categorization divides CTI into strategic, operational, and tactical categories. Strategic CTI is focused on long-term planning and decision-making, while operational CTI is focused on day-to-day operations, and tactical CTI is focused on specific incidents or events. Other approaches include further categories, like technical CTI, which is generally short to medium-term, with a focus on identifying technical vulnerabilities and threats, or human CTI, which is typically short to medium-term, with a focus on understanding the motivations and intentions of threat actors. Overall, the expectations regarding time perspective and analysis scope for each category of CTI may vary depending on the organization's needs and goals, but these general guidelines can be useful for understanding the different types of CTI and their respective focuses. In the following figure, four CTI types are presented in relation to information assortment, knowledge analysis, and intelligence consumption [1].
-        </p>
-        <div style="width: 50%; margin-left:auto; margin-right: auto;">
-          <img
-          src="{{ site.baseurl }}/assets/img/blog7-figure1.png"
-          alt="CTI Categorization" 
-          />
-        </div>
-        <p><b>Figure 1:</b> CACAO Architecture.</p>
-        <p>
-          Regardless of the CTI category, the selection of CTI feeds is crucial for CTI's added value. CTI feeds are sources of information about current and emerging cyber threats and attacks, and they can be obtained from various providers such as government agencies, commercial vendors, and open-source communities. Organizations could use both internal and external CTI sources. Internal Sources include raw technical data (logs, traffic. etc.) or processed threat information and alerts from advanced security solutions (SIEM, EDR, NDR). External Sources cover a wider range of information, and they could be indicatively categorized as:
-        </p>
-        <ul>
-          <li>
-            Open-source intelligence (OSINT) feeds, cost-free, with considerations regarding their quality, collection effort, and analysis methods. Private sector or Cybersecurity Institutes and Agencies free seeds could be considered OSINT, but the main sources of information are the web (surface, Deep and Dark) and social media.
-          </li>
-          <li>
-            Private or commercial sources: These are usually paid; however, in some cases, there is a free version where not all features are available.
-          </li>
-          <li>
-            Cybersecurity Institutes and Agencies, like The National Institute of Standards and Technology (NIST) of the US Department of Commerce or the US Cybersecurity and Infrastructure Security Agency (CISA).
-          </li>
-          <li>
-            Shared feeds between trusted organizations with similar scope and objectives, like the European Cyber Security Incident Response Teams (CSIRTs) and the Cyber Crises Liaison Organization Network (CyCLONe).
-          </li>
-        </ul>
-        <p>
-          To maximize the value of CTI, it is important to carefully select the information sources relevant to the organization's industry, assets, and threat landscape. In other words, the quality and relevance of CTI feeds directly impact the effectiveness of an organization's CTI program. Moreover, selecting the right CTI feeds can also help in reducing the amount of noise and false positives that security teams must deal with, making it easier for them to focus on the most critical threats and prioritize their responses accordingly. Several free and open-source CTI feeds are available, and even if they may not usually provide the same level of quality and coverage as paid CTI feeds, a careful evaluation and selection of free CTI feeds can provide valuable information.
-        </p>
-        <p>
-          Data formats play a crucial role in facilitating the sharing and compatibility of Cyber Threat Intelligence (CTI). Open formats - such as JSON, XML, and CSV - hold significant value in promoting interoperability. In the realm of cybersecurity, diverse data formats are employed for representing threat intelligence and enabling information sharing. Notably, these formats encompass enumerations, scoring systems, and sharing standards, as identified in [2]:
-        </p>
-        <table>
-          <tr>
-            <td colspan="3" style="background-color: lightgray;"><b>Common data formats for threat intelligence representation and information sharing</b></td>
-          </tr>
-          <tr>
-            <td>Enumerations</td>
-            <td>Scoring Systems</td>
-            <td>Sharing Standards</td>
-          </tr>
-          <tr>
-            <td>
-              <ul>
-                <li>TAL (Threat Agent Library)</li>
-                <li>Common Vulnerabilities and Exposures (CVE) list</li>
-                <li> NVD (National Vulnerability Database)</li>
-                <li>CPE (Common Platform Enumeration) </li>
-                <li>Common Weakness Enumeration (CWE) list</li>
-                <li>CAPEC (Common Attack Patterns Enumerations and Characteristics)</li>
-                <li>MITRE ATT&CK® knowledge base</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>CVSS (Common Vulnerability Scoring System)</li>
-                <li>CWSS (Common Weakness Scoring System)</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Structured Threat Information Expression (STIX) language/format</li>
-                <li>OpenIOC, extensible XML schema</li>
-                <li>IODEF (Incident Object Description Exchange Format)</li>
-                <li>The Vocabulary for Event Recording and Incident Sharing VERIS [VERIS]</li>
-                <li>TAXII (Trusted Automated eXchange of Indicator Information) is a set of protocols and services.</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
-        <p><b>Table 1:</b> Common CTI Data Formats.</p>
-        <p>
-          As part of the JCOP project, we evaluated free CTI feeds based on their community activity and update frequency and their compatibility with the OpenCTI platform [3], which is used as the main CTI platform of JCOP.
-        </p>
-        <p>
-          Some examples of useful free CTI feeds are:
-        </p>
-        <ul>
-          <li>
-            The National Vulnerability Database (NVD) [4]: This free vulnerability database provided by the National Institute of Standards and Technology (NIST) contains information about known vulnerabilities in software and hardware products.
-          </li>
-          <li>
-            The Common Vulnerabilities and Exposures (CVE) database [5]: This is a free public database of common vulnerabilities and exposures maintained by MITRE. CVE identifiers are used widely to track and identify vulnerabilities in software and hardware.
-          </li>
-          <li>
-            MITRE Datasets [6]: This is a free CTI feed used for organizing CTI sources, like tactics, techniques, and procedures (TTPs), advanced persistent threats (APTs), malware, intrusion sets, attack patterns, etc.
-          </li>
-          <li>
-            AbuseIPDB [7]: This is a free database of IP addresses that have been reported for malicious activity, including spam, hacking, and malware distribution. The database can be used to identify potentially malicious IP addresses and block them from accessing an organization's network.
-          </li>
-          <li>
-            Cybercrime Tracker RSS feeds [8]: A site containing information about botnets, malicious IP addresses, and C&C servers.
-          </li>
-          <li>
-            CISA Known Exploited Vulnerability (KEV) catalog [9]: A list of registered CVEs for which there is reliable evidence that the vulnerability has been actively exploited in the wild or there is a clear remediation action for the vulnerability, such as a vendor-provided update.
-          </li>
-        </ul>
-        <p>
-          In conclusion, the utilization of Cyber Threat Intelligence (CTI) is not just a luxury but a necessity for organizations, and particularly for National Cybersecurity Authorities, due to their responsibility of protecting critical infrastructure entities, government systems, and national security interests. CTI enables these authorities to gather intelligence about potential cyber threats targeting the country's assets, critical sectors, or government agencies. It helps enhance situational awareness, facilitating early-warning systems and supporting incident response at a national level. CTI also assists in fostering collaboration and information sharing among various organizations, both within and across national boundaries, to combat cyber threats collectively.
-        </p>
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ page.pageHeading }}</h2>
+                <code>Author: NCSA</code> <br />
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    Cyber threat intelligence (CTI) refers to collecting, analyzing, and disseminating information about
+                    emerging or current cyber threats. It involves gathering and analyzing data from various sources to
+                    identify potential threats and vulnerabilities and then using that information to develop strategies
+                    for preventing, detecting, and responding to cyber-attacks. CTI has emerged as a vital field of
+                    interest in response to the constantly changing and intricate threat environment, and there is
+                    growing enthusiasm among both academia and organizations to understand its applications, benefits,
+                    data sources, and the transformation of data into actionable intelligence. However, it is still not
+                    a clearly defined field compared with other threat Intelligence fields, like defense, law
+                    enforcement, and public health.
+                </p>
+                <p>
+                    One of the most common approaches to CTI categorization divides CTI into strategic, operational, and
+                    tactical categories. Strategic CTI is focused on long-term planning and decision-making, while
+                    operational CTI is focused on day-to-day operations, and tactical CTI is focused on specific
+                    incidents or events. Other approaches include further categories, like technical CTI, which is
+                    generally short to medium-term, with a focus on identifying technical vulnerabilities and threats,
+                    or human CTI, which is typically short to medium-term, with a focus on understanding the motivations
+                    and intentions of threat actors. Overall, the expectations regarding time perspective and analysis
+                    scope for each category of CTI may vary depending on the organization's needs and goals, but these
+                    general guidelines can be useful for understanding the different types of CTI and their respective
+                    focuses. In the following figure, four CTI types are presented in relation to information
+                    assortment, knowledge analysis, and intelligence consumption [1].
+                </p>
+                <div style="width: 50%; margin-left: auto; margin-right: auto">
+                    <img src="{{ site.baseurl }}/assets/img/blog7-figure1.png" alt="CTI Categorization" />
+                </div>
+                <p><b>Figure 1:</b> CACAO Architecture.</p>
+                <p>
+                    Regardless of the CTI category, the selection of CTI feeds is crucial for CTI's added value. CTI
+                    feeds are sources of information about current and emerging cyber threats and attacks, and they can
+                    be obtained from various providers such as government agencies, commercial vendors, and open-source
+                    communities. Organizations could use both internal and external CTI sources. Internal Sources
+                    include raw technical data (logs, traffic. etc.) or processed threat information and alerts from
+                    advanced security solutions (SIEM, EDR, NDR). External Sources cover a wider range of information,
+                    and they could be indicatively categorized as:
+                </p>
+                <ul>
+                    <li>
+                        Open-source intelligence (OSINT) feeds, cost-free, with considerations regarding their quality,
+                        collection effort, and analysis methods. Private sector or Cybersecurity Institutes and Agencies
+                        free seeds could be considered OSINT, but the main sources of information are the web (surface,
+                        Deep and Dark) and social media.
+                    </li>
+                    <li>
+                        Private or commercial sources: These are usually paid; however, in some cases, there is a free
+                        version where not all features are available.
+                    </li>
+                    <li>
+                        Cybersecurity Institutes and Agencies, like The National Institute of Standards and Technology
+                        (NIST) of the US Department of Commerce or the US Cybersecurity and Infrastructure Security
+                        Agency (CISA).
+                    </li>
+                    <li>
+                        Shared feeds between trusted organizations with similar scope and objectives, like the European
+                        Cyber Security Incident Response Teams (CSIRTs) and the Cyber Crises Liaison Organization
+                        Network (CyCLONe).
+                    </li>
+                </ul>
+                <p>
+                    To maximize the value of CTI, it is important to carefully select the information sources relevant
+                    to the organization's industry, assets, and threat landscape. In other words, the quality and
+                    relevance of CTI feeds directly impact the effectiveness of an organization's CTI program. Moreover,
+                    selecting the right CTI feeds can also help in reducing the amount of noise and false positives that
+                    security teams must deal with, making it easier for them to focus on the most critical threats and
+                    prioritize their responses accordingly. Several free and open-source CTI feeds are available, and
+                    even if they may not usually provide the same level of quality and coverage as paid CTI feeds, a
+                    careful evaluation and selection of free CTI feeds can provide valuable information.
+                </p>
+                <p>
+                    Data formats play a crucial role in facilitating the sharing and compatibility of Cyber Threat
+                    Intelligence (CTI). Open formats - such as JSON, XML, and CSV - hold significant value in promoting
+                    interoperability. In the realm of cybersecurity, diverse data formats are employed for representing
+                    threat intelligence and enabling information sharing. Notably, these formats encompass enumerations,
+                    scoring systems, and sharing standards, as identified in [2]:
+                </p>
+                <table>
+                    <tr>
+                        <td colspan="3" style="background-color: lightgray">
+                            <b>Common data formats for threat intelligence representation and information sharing</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enumerations</td>
+                        <td>Scoring Systems</td>
+                        <td>Sharing Standards</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>TAL (Threat Agent Library)</li>
+                                <li>Common Vulnerabilities and Exposures (CVE) list</li>
+                                <li>NVD (National Vulnerability Database)</li>
+                                <li>CPE (Common Platform Enumeration)</li>
+                                <li>Common Weakness Enumeration (CWE) list</li>
+                                <li>CAPEC (Common Attack Patterns Enumerations and Characteristics)</li>
+                                <li>MITRE ATT&CK® knowledge base</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>CVSS (Common Vulnerability Scoring System)</li>
+                                <li>CWSS (Common Weakness Scoring System)</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Structured Threat Information Expression (STIX) language/format</li>
+                                <li>OpenIOC, extensible XML schema</li>
+                                <li>IODEF (Incident Object Description Exchange Format)</li>
+                                <li>The Vocabulary for Event Recording and Incident Sharing VERIS [VERIS]</li>
+                                <li>
+                                    TAXII (Trusted Automated eXchange of Indicator Information) is a set of protocols
+                                    and services.
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <p><b>Table 1:</b> Common CTI Data Formats.</p>
+                <p>
+                    As part of the JCOP project, we evaluated free CTI feeds based on their community activity and
+                    update frequency and their compatibility with the OpenCTI platform [3], which is used as the main
+                    CTI platform of JCOP.
+                </p>
+                <p>Some examples of useful free CTI feeds are:</p>
+                <ul>
+                    <li>
+                        The National Vulnerability Database (NVD) [4]: This free vulnerability database provided by the
+                        National Institute of Standards and Technology (NIST) contains information about known
+                        vulnerabilities in software and hardware products.
+                    </li>
+                    <li>
+                        The Common Vulnerabilities and Exposures (CVE) database [5]: This is a free public database of
+                        common vulnerabilities and exposures maintained by MITRE. CVE identifiers are used widely to
+                        track and identify vulnerabilities in software and hardware.
+                    </li>
+                    <li>
+                        MITRE Datasets [6]: This is a free CTI feed used for organizing CTI sources, like tactics,
+                        techniques, and procedures (TTPs), advanced persistent threats (APTs), malware, intrusion sets,
+                        attack patterns, etc.
+                    </li>
+                    <li>
+                        AbuseIPDB [7]: This is a free database of IP addresses that have been reported for malicious
+                        activity, including spam, hacking, and malware distribution. The database can be used to
+                        identify potentially malicious IP addresses and block them from accessing an organization's
+                        network.
+                    </li>
+                    <li>
+                        Cybercrime Tracker RSS feeds [8]: A site containing information about botnets, malicious IP
+                        addresses, and C&C servers.
+                    </li>
+                    <li>
+                        CISA Known Exploited Vulnerability (KEV) catalog [9]: A list of registered CVEs for which there
+                        is reliable evidence that the vulnerability has been actively exploited in the wild or there is
+                        a clear remediation action for the vulnerability, such as a vendor-provided update.
+                    </li>
+                </ul>
+                <p>
+                    In conclusion, the utilization of Cyber Threat Intelligence (CTI) is not just a luxury but a
+                    necessity for organizations, and particularly for National Cybersecurity Authorities, due to their
+                    responsibility of protecting critical infrastructure entities, government systems, and national
+                    security interests. CTI enables these authorities to gather intelligence about potential cyber
+                    threats targeting the country's assets, critical sectors, or government agencies. It helps enhance
+                    situational awareness, facilitating early-warning systems and supporting incident response at a
+                    national level. CTI also assists in fostering collaboration and information sharing among various
+                    organizations, both within and across national boundaries, to combat cyber threats collectively.
+                </p>
 
-        <b>Resources</b>
-        <ol>
-          <li>Montasari, R., Carroll, F., Macdonald, S., Jahankhani, H., Hosseinian-Far, A., & Daneshkhah, A. (2021). Application of Artificial Intelligence and Machine Learning in Producing Actionable Cyber Threat Intelligence. Advanced Sciences and Technologies for Security Applications, 47-64. https://doi.org/10.1007/978-3-030-60425-7_3</li>
-          <li>Mavroeidis, V., & Bromander, S. (2017, September). Cyber threat intelligence model: an evaluation of taxonomies, sharing standards, and ontologies within cyber threat intelligence. In 2017 European Intelligence and Security Informatics Conference (EISIC) (pp. 91-98). IEEE.</li>
-          <li><a href="https://github.com/OpenCTI-Platform/opencti">https://github.com/OpenCTI-Platform/opencti</a></li>
-          <li><a href="https://nvd.nist.gov/vuln/data-feeds">https://nvd.nist.gov/vuln/data-feeds</a></li>
-          <li><a href="https://cve.mitre.org/cve/data_feeds.html">https://cve.mitre.org/cve/data_feeds.html</a></li>
-          <li><a href="https://attack.mitre.org/resources/working-with-attack/">https://attack.mitre.org/resources/working-with-attack/</a></li>
-          <li><a href="https://www.abuseipdb.com/">https://www.abuseipdb.com/</a></li>
-          <li><a href="https://cybercrime-tracker.net/">https://cybercrime-tracker.net/</a></li>
-          <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog ">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li>
-        </ol>
-      </div>
-    </div>
-  </section>
+                <b>Resources</b>
+                <ol>
+                    <li>
+                        Montasari, R., Carroll, F., Macdonald, S., Jahankhani, H., Hosseinian-Far, A., & Daneshkhah, A.
+                        (2021). Application of Artificial Intelligence and Machine Learning in Producing Actionable
+                        Cyber Threat Intelligence. Advanced Sciences and Technologies for Security Applications, 47-64.
+                        https://doi.org/10.1007/978-3-030-60425-7_3
+                    </li>
+                    <li>
+                        Mavroeidis, V., & Bromander, S. (2017, September). Cyber threat intelligence model: an
+                        evaluation of taxonomies, sharing standards, and ontologies within cyber threat intelligence. In
+                        2017 European Intelligence and Security Informatics Conference (EISIC) (pp. 91-98). IEEE.
+                    </li>
+                    <li>
+                        <a href="https://github.com/OpenCTI-Platform/opencti"
+                            >https://github.com/OpenCTI-Platform/opencti</a
+                        >
+                    </li>
+                    <li><a href="https://nvd.nist.gov/vuln/data-feeds">https://nvd.nist.gov/vuln/data-feeds</a></li>
+                    <li>
+                        <a href="https://cve.mitre.org/cve/data_feeds.html"
+                            >https://cve.mitre.org/cve/data_feeds.html</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://attack.mitre.org/resources/working-with-attack/"
+                            >https://attack.mitre.org/resources/working-with-attack/</a
+                        >
+                    </li>
+                    <li><a href="https://www.abuseipdb.com/">https://www.abuseipdb.com/</a></li>
+                    <li><a href="https://cybercrime-tracker.net/">https://cybercrime-tracker.net/</a></li>
+                    <li>
+                        <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog "
+                            >https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a
+                        >
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
 </main>
