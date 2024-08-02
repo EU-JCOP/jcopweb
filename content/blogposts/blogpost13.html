@@ -37,7 +37,7 @@ permalink: /blogposts/blog13.html
                 <h3>
                     How Does 3PC Work:
                 </h3>
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div style="width: 60%; margin-left: auto; margin-right: auto">
                     <img
                         src="{{ site.baseurl }}/assets/img/blog13-fig2.png"
                         alt="Sequence Diagram of the new 3PC protocol."
@@ -73,7 +73,7 @@ permalink: /blogposts/blog13.html
                 </ul>
                 <p>Even if it is not cracked the server will always get R candidate passwords. This will stay true based on the size of the cracking dataset, even if the content will completely change. This formula is depicted in Figure 2:
                 </p>
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div style="width: 50%; margin-left: auto; margin-right: auto">
                     <img
                         src="{{ site.baseurl }}/assets/img/blog13-fig3.png"
                         alt="Formula for calculating the relation of R and the number of decoy hashes."
@@ -86,7 +86,7 @@ permalink: /blogposts/blog13.html
                 <p>
                     Next, the 3PC protocol involves generates a vector that defines the decoy hashes that includes the target hash. Importantly, the actual contents of this set are never explicitly listed or sent; only the definition is communicated, ensuring that the specifics of the target hash remain obscured. This is important, as if one would attempt to write every decoy hash value on the hard disk, it would result in Petabyetes of data, as the decoy set can easily hold 10^70 hash values. Figure 3. shows this concept with a toy example where the hash values are short. On the server side all the decoy hashes are shown for demonstration, but they will never be extracted in this way.
                 </p>
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div style="width: 50%; margin-left: auto; margin-right: auto">
                     <img
                         src="{{ site.baseurl }}/assets/img/blog13-fig4.png"
                         alt="Simplified protocol."
