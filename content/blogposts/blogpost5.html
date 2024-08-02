@@ -6,101 +6,247 @@ permalink: /blogposts/blog5.html
 ---
 
 <main id="main">
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>{{ page.pageHeading }} </h2>
-        <code>Author: UiO</code> <br />
-      </div>
-      <div class="col-sm-12">
-        <h3>Introduction</h3>
-        <p>
-          As the ENISA Threat Landscape 2022 report highlights, cybersecurity attacks continuously grow in number, sophistication, and impact [1]. The digital transformation, which has accelerated during the COVID-19 pandemic, provides greater opportunities to organizations, governments, and society. However, it results in a rapidly growing complex digital infrastructure with blurred boundaries of responsibilities, multiple suppliers, and challenges to manage. As a result, the negative impact cybersecurity incidents can have on economies, societies, and democracies also grows along. 
-        </p>
-        <p>
-          To enhance cybersecurity across the European Union (EU), the European Commission (EC) has legislated the Network and Information Security (NIS) Directive [2] that was adopted in 2016, also focusing on cooperation and collaboration between EU countries by encouraging and, in certain cases mandating information exchange in order to jointly tackle emerging security threats and risks. Recently, NIS2 was published, significantly expanding the range of sectors required to achieve a high common level of cybersecurity [3]. The maturity of defending entities across the globe differs significantly; thus, exchanging knowledge and learning from each other is essential to enhance our cybersecurity capabilities. In fact, recent EU initiatives, such as NIS2, mandate establishing cooperation and collaboration mechanisms [3] to respond effectively and efficiently to cyber incidents, including compliance with reporting obligations. To this end, the Security Operations Centers (SOCs) of Member States and their operators of essential services should incorporate incident response enablers that align with good practices established by the EU authorities and provide the methods and processes needed to guarantee interaction with other SOC instances and associated EU actors. This requires putting in place and following standard operating procedures and having the necessary technology to support their execution and ensure compliance with policies and regulatory frameworks [4]. Nevertheless, incident response is a complex function that requires significant planning, resources, and coordination among multiple stakeholders. Thus, to achieve this from a practical perspective, the established approach of exchanging cyber threat intelligence for shared threat situational awareness could be adopted for also sharing cybersecurity operations processes, such as incident response workflows, to improve the defense capabilities among collaborating parties and countries.
-        </p>
-        <p>
-          A standardization work that aims to provide the means to address the above need is OASIS Collaborative Automated Course of Actions Operations (CACAO) [5] for cybersecurity. CACAO is a specification that defines a common playbook schema and taxonomy to create, document, and share cybersecurity operations playbooks. However, it does not specify any modeling notation for visualization, making it practically challenging to work with. On the other hand, Business Process Model and Notation (BPMN) [6] offers a standardized and rich notation for visualizing business processes. BPMN 2.0 is a widely used standard with a plethora of tools for creating, editing, and automatically executing BPMN workflows. In fact, it is utilized by many cybersecurity professionals for documenting their operating procedures.
-        </p>
-        <p>
-          Motivated by the above, we examine the use of BPMN modeling notation as a candidate to graphically represent CACAO playbooks and provide a high-level construct mapping between CACAO 2.0 [5] and BPMN 2.0 [6], thus paving the way for CACAO playbook visualization through BPMN-enabled tools.
-        </p>
-        <h3>Background</h3>
-        <h4>Cybersecurity Operations Playbooks and Automation</h4>
-        <p>
-          Defenders must constantly adapt and respond to incidents, requiring better tools, specialized processes, applicable skills and knowledge, time, and human resources. The challenge lies in achieving effective and efficient interaction between the various elements of a defense environment to ensure a successful and coordinated incident response. Current cyber-defense practices rely heavily on analysts' speed, expertise, and experience. Unfortunately, human-centered practices do not scale sufficiently to match the velocity, volume, and complexity of current and emerging threats. To overcome slow response times and errors in judgment and ensure a robust, coordinated, and uniform response across multiple teams, defenders standardize and, to the extent possible, automate incident response processes and procedures. A particular focus is given to repetitive tasks, which, if automated, may speed up the response to an incident and allow analysts to perform other more intellectually demanding duties [1]. In this context, a playbook is devised to document detection, investigation, prevention, mitigation, and remediation steps, capturing managed and repeatable cybersecurity and network operations in support of preparedness, automation, sharing, and interoperability. The execution of a playbook may be fully automated, semi-automated, or manual. Further, playbooks are a fundamental component of Security Orchestration, Automation, and Response (SOAR) platforms which aim to orchestrate software and human agents and automate defensive procedures to the extent possible, and according to the guidelines of the underlying playbook executed.
-        </p>
-        <p>
-          As playbooks can play a significant role in cyber defense, we need a faster and easier way to create, manipulate and visualize them. In this research, we focus on CACAO, the first open-source standard for cybersecurity playbooks, which as for now, does not specify any modeling notation to support graphical representation.
-        </p>
-        <h4>Collaborative Automated Course of Action Operations</h4>
-        <p>
-          As mentioned in the section above, the CACAO specification [5] defines a standard schema and taxonomy for creating structured machine-readable cybersecurity playbooks that can be exchanged across organizational boundaries and technical solutions. For interoperability reasons and to support its adoption by the global community, CACAO is designed to be vendor-agnostic. Figure 1 presents the building blocks of a CACAO playbook.
-        </p>
-        <div style="width: 50%; margin-left:auto; margin-right: auto;">
-          <img
-          src="{{ site.baseurl }}/assets/img/blog5-figure1.png"
-          alt="CACAO Architecture"
-          class="responsive-img-30vh"
-          />
-        </div>
-        <p><b>Figure 1:</b> CACAO Architecture.</p>
-        <p>
-          CACAO is created to be flexible in terms of use and build-in encoded automation capability. Thus adopters, based on their objectives, use cases, and maturity, can create playbooks in different levels of abstraction, detail, and complexity, including the coordination of different operational roles, defense functions, and entities involved in their execution. CACAO is maintained by the OASIS Collaborative Automated Course of Action Operations Technical Committee (CACAO TC) [7]. Proof of concept implementations utilizing CACAO have manifested. For example, [8] and [9] introduced extension mechanisms to relate and ship CACAO playbooks with cyber threat intelligence. [4] brought up CACAO in a conceptual blueprint for architecting and establishing interoperable SOCs in the EU.
-        </p>
-        <h4>Business Process Model and Notation</h4>
-        <p>
-          BPMN 2.0 [6] is a standard for graphically representing business processes in different levels of abstraction, from high-level overviews to detailed executable workflows. With BPMN, organizational processes become more accessible and understandable by both technical and non-technical personnel and gives organizations the ability to communicate these processes in a standard manner. It is used in various industries, including the field of cybersecurity. Briefly, BPMN provides a rich set of graphical elements representing activities, events, gateways, data objects, messages, and flows and is supported by a wide range of modeling tools and platforms, making it accessible and practical for organizations of all sizes. The BPMN 2.0 standard is maintained by the Object Management Group (OMG), a standards development organization. The last version of the standard, BPMN 2.0, was published in 2011, and in 2013 BPMN 2.0 became an international standard through ISO/IEC 19510 [10].
-        </p>
-        <h3>A BPMN-based Modeling Notation for CACAO Playbooks</h3>
-        <p>
-          CACAO playbooks are serialized in JavaScript Object Notation (JSON) format. Although JSON is both human- and machine-readable, even a non-complex CACAO playbook will consist of hundreds of lines of code, making it challenging for a defender to design, maintain, comprehend, and utilize it. As CACAO is still in its early adoption, no modeling notation has yet been considered by the CACAO TC. Providing the ability to graphically represent CACAO playbooks using a standardized notation, like BPMN, will significantly improve defenders' efficiency in generating, maintaining, and executing playbooks (i.e., handling incidents).<br/>This research breaks that barrier and provides a mapping between CACAO 2.0 and BPMN 2.0 constructs and shapes to incorporate a modeling notation to CACAO or/and allow for their two-way conversion.
-        </p>
-        <p>
-          Producers and consumers of CACAO 2.0 must conform to the requirements defined in section 10 of the specification [5]. Considering the mandatory and optional CACAO features to support, this work identifies BPMN constructs with the same meaning, aiming to use a subset of the modeling notation to graphically represent CACAO playbooks. Per the CACAO 2.0 specification, producers and consumers must support versioning, variables, playbooks, workflow steps, commands, agents, and targets. Optional features are data markings, extensions, and digital signatures.
-        </p>
-        <p>
-          The results are summarized in Figure 2. In particular, Figure 2 presents all construct mappings between CACAO 2.0 and BPMN 2.0.
-        </p>
-        <div>
-          <img
-          src="{{ site.baseurl }}/assets/img/blog5-figure2.png"
-          alt="BPMN-CACAO mapping."
-          class="responsive-img-80vh"
-          />
-        </div>
-        <p><b>Figure 2:</b> BPMN-CACAO mapping.</p>
-        <h4>Limitations</h4>
-        <p>
-          Several intricacies emerged when creating a construct mapping between BPMN and CACAO. A key consideration is that, in some cases, the mappings are not one-to-one, as some CACAO constructs can be modeled in several ways in BPMN. Thus, a degree of complexity manifests when converting a  CACAO playbook to BPMN rather than the opposite. Another concern is that using Sub-Processes to solve the CACAO construct translation/conversion case mentioned above creates another case, meaning we need several different types of Sub-Processes that will share the common metadata of CACAO Workflow Steps. However, the object-specific (unique) properties will differ. A Parallel Step needs to understand specific properties pertinent to the Parallel Conditional Step, whereas, e.g., the Switch Condition Step needs other specific properties for its logical functions. The above intricacies complicate the creation of an explicit conversion mechanism between these specifications since the converter would need to look for several different patterns of groups of BPMN elements to map to one construct in CACAO.
-        </p>
-        <h4>Future work</h4>
-        <p>
-          This research is the first step in introducing a modeling notation for CACAO playbooks. In this context, we examined whether we can utilize BPMN. Analyzing the mapping of constructs between the two standards and knowing the intricacies involved enables us to move toward developing software that can convert CACAO playbooks to BPMN workflows and the opposite. While developing the software, a key consideration must be restricting the amount of valid BPMN representations a CACAO construct can be represented, allowing the development of an MVP while efficiently managing development resources. Finally, to achieve a complete conversion, all the utilized BPMN constructs must be extended to accommodate all the metadata of CACAO.
-        </p>
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ page.pageHeading }} </h2>
+                <code>Author: UiO</code> <br />
+            </div>
+            <div class="col-sm-12">
+                <h3>Introduction</h3>
+                <p>
+                    As the ENISA Threat Landscape 2022 report highlights, cybersecurity attacks continuously grow in
+                    number, sophistication, and impact [1]. The digital transformation, which has accelerated during the
+                    COVID-19 pandemic, provides greater opportunities to organizations, governments, and society.
+                    However, it results in a rapidly growing complex digital infrastructure with blurred boundaries of
+                    responsibilities, multiple suppliers, and challenges to manage. As a result, the negative impact
+                    cybersecurity incidents can have on economies, societies, and democracies also grows along.
+                </p>
+                <p>
+                    To enhance cybersecurity across the European Union (EU), the European Commission (EC) has legislated
+                    the Network and Information Security (NIS) Directive [2] that was adopted in 2016, also focusing on
+                    cooperation and collaboration between EU countries by encouraging and, in certain cases mandating
+                    information exchange in order to jointly tackle emerging security threats and risks. Recently, NIS2
+                    was published, significantly expanding the range of sectors required to achieve a high common level
+                    of cybersecurity [3]. The maturity of defending entities across the globe differs significantly;
+                    thus, exchanging knowledge and learning from each other is essential to enhance our cybersecurity
+                    capabilities. In fact, recent EU initiatives, such as NIS2, mandate establishing cooperation and
+                    collaboration mechanisms [3] to respond effectively and efficiently to cyber incidents, including
+                    compliance with reporting obligations. To this end, the Security Operations Centers (SOCs) of Member
+                    States and their operators of essential services should incorporate incident response enablers that
+                    align with good practices established by the EU authorities and provide the methods and processes
+                    needed to guarantee interaction with other SOC instances and associated EU actors. This requires
+                    putting in place and following standard operating procedures and having the necessary technology to
+                    support their execution and ensure compliance with policies and regulatory frameworks [4].
+                    Nevertheless, incident response is a complex function that requires significant planning, resources,
+                    and coordination among multiple stakeholders. Thus, to achieve this from a practical perspective,
+                    the established approach of exchanging cyber threat intelligence for shared threat situational
+                    awareness could be adopted for also sharing cybersecurity operations processes, such as incident
+                    response workflows, to improve the defense capabilities among collaborating parties and countries.
+                </p>
+                <p>
+                    A standardization work that aims to provide the means to address the above need is OASIS
+                    Collaborative Automated Course of Actions Operations (CACAO) [5] for cybersecurity. CACAO is a
+                    specification that defines a common playbook schema and taxonomy to create, document, and share
+                    cybersecurity operations playbooks. However, it does not specify any modeling notation for
+                    visualization, making it practically challenging to work with. On the other hand, Business Process
+                    Model and Notation (BPMN) [6] offers a standardized and rich notation for visualizing business
+                    processes. BPMN 2.0 is a widely used standard with a plethora of tools for creating, editing, and
+                    automatically executing BPMN workflows. In fact, it is utilized by many cybersecurity professionals
+                    for documenting their operating procedures.
+                </p>
+                <p>
+                    Motivated by the above, we examine the use of BPMN modeling notation as a candidate to graphically
+                    represent CACAO playbooks and provide a high-level construct mapping between CACAO 2.0 [5] and BPMN
+                    2.0 [6], thus paving the way for CACAO playbook visualization through BPMN-enabled tools.
+                </p>
+                <h3>Background</h3>
+                <h4>Cybersecurity Operations Playbooks and Automation</h4>
+                <p>
+                    Defenders must constantly adapt and respond to incidents, requiring better tools, specialized
+                    processes, applicable skills and knowledge, time, and human resources. The challenge lies in
+                    achieving effective and efficient interaction between the various elements of a defense environment
+                    to ensure a successful and coordinated incident response. Current cyber-defense practices rely
+                    heavily on analysts' speed, expertise, and experience. Unfortunately, human-centered practices do
+                    not scale sufficiently to match the velocity, volume, and complexity of current and emerging
+                    threats. To overcome slow response times and errors in judgment and ensure a robust, coordinated,
+                    and uniform response across multiple teams, defenders standardize and, to the extent possible,
+                    automate incident response processes and procedures. A particular focus is given to repetitive
+                    tasks, which, if automated, may speed up the response to an incident and allow analysts to perform
+                    other more intellectually demanding duties [1]. In this context, a playbook is devised to document
+                    detection, investigation, prevention, mitigation, and remediation steps, capturing managed and
+                    repeatable cybersecurity and network operations in support of preparedness, automation, sharing, and
+                    interoperability. The execution of a playbook may be fully automated, semi-automated, or manual.
+                    Further, playbooks are a fundamental component of Security Orchestration, Automation, and Response
+                    (SOAR) platforms which aim to orchestrate software and human agents and automate defensive
+                    procedures to the extent possible, and according to the guidelines of the underlying playbook
+                    executed.
+                </p>
+                <p>
+                    As playbooks can play a significant role in cyber defense, we need a faster and easier way to
+                    create, manipulate and visualize them. In this research, we focus on CACAO, the first open-source
+                    standard for cybersecurity playbooks, which as for now, does not specify any modeling notation to
+                    support graphical representation.
+                </p>
+                <h4>Collaborative Automated Course of Action Operations</h4>
+                <p>
+                    As mentioned in the section above, the CACAO specification [5] defines a standard schema and
+                    taxonomy for creating structured machine-readable cybersecurity playbooks that can be exchanged
+                    across organizational boundaries and technical solutions. For interoperability reasons and to
+                    support its adoption by the global community, CACAO is designed to be vendor-agnostic. Figure 1
+                    presents the building blocks of a CACAO playbook.
+                </p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog5-figure1.png"
+                        alt="CACAO Architecture"
+                        class="responsive-img-30vh" />
+                </div>
+                <p><b>Figure 1:</b> CACAO Architecture.</p>
+                <p>
+                    CACAO is created to be flexible in terms of use and build-in encoded automation capability. Thus
+                    adopters, based on their objectives, use cases, and maturity, can create playbooks in different
+                    levels of abstraction, detail, and complexity, including the coordination of different operational
+                    roles, defense functions, and entities involved in their execution. CACAO is maintained by the OASIS
+                    Collaborative Automated Course of Action Operations Technical Committee (CACAO TC) [7]. Proof of
+                    concept implementations utilizing CACAO have manifested. For example, [8] and [9] introduced
+                    extension mechanisms to relate and ship CACAO playbooks with cyber threat intelligence. [4] brought
+                    up CACAO in a conceptual blueprint for architecting and establishing interoperable SOCs in the EU.
+                </p>
+                <h4>Business Process Model and Notation</h4>
+                <p>
+                    BPMN 2.0 [6] is a standard for graphically representing business processes in different levels of
+                    abstraction, from high-level overviews to detailed executable workflows. With BPMN, organizational
+                    processes become more accessible and understandable by both technical and non-technical personnel
+                    and gives organizations the ability to communicate these processes in a standard manner. It is used
+                    in various industries, including the field of cybersecurity. Briefly, BPMN provides a rich set of
+                    graphical elements representing activities, events, gateways, data objects, messages, and flows and
+                    is supported by a wide range of modeling tools and platforms, making it accessible and practical for
+                    organizations of all sizes. The BPMN 2.0 standard is maintained by the Object Management Group
+                    (OMG), a standards development organization. The last version of the standard, BPMN 2.0, was
+                    published in 2011, and in 2013 BPMN 2.0 became an international standard through ISO/IEC 19510 [10].
+                </p>
+                <h3>A BPMN-based Modeling Notation for CACAO Playbooks</h3>
+                <p>
+                    CACAO playbooks are serialized in JavaScript Object Notation (JSON) format. Although JSON is both
+                    human- and machine-readable, even a non-complex CACAO playbook will consist of hundreds of lines of
+                    code, making it challenging for a defender to design, maintain, comprehend, and utilize it. As CACAO
+                    is still in its early adoption, no modeling notation has yet been considered by the CACAO TC.
+                    Providing the ability to graphically represent CACAO playbooks using a standardized notation, like
+                    BPMN, will significantly improve defenders' efficiency in generating, maintaining, and executing
+                    playbooks (i.e., handling incidents).<br />This research breaks that barrier and provides a mapping
+                    between CACAO 2.0 and BPMN 2.0 constructs and shapes to incorporate a modeling notation to CACAO
+                    or/and allow for their two-way conversion.
+                </p>
+                <p>
+                    Producers and consumers of CACAO 2.0 must conform to the requirements defined in section 10 of the
+                    specification [5]. Considering the mandatory and optional CACAO features to support, this work
+                    identifies BPMN constructs with the same meaning, aiming to use a subset of the modeling notation to
+                    graphically represent CACAO playbooks. Per the CACAO 2.0 specification, producers and consumers must
+                    support versioning, variables, playbooks, workflow steps, commands, agents, and targets. Optional
+                    features are data markings, extensions, and digital signatures.
+                </p>
+                <p>
+                    The results are summarized in Figure 2. In particular, Figure 2 presents all construct mappings
+                    between CACAO 2.0 and BPMN 2.0.
+                </p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog5-figure2.png"
+                        alt="BPMN-CACAO mapping."
+                        class="responsive-img-80vh" />
+                </div>
+                <p><b>Figure 2:</b> BPMN-CACAO mapping.</p>
+                <h4>Limitations</h4>
+                <p>
+                    Several intricacies emerged when creating a construct mapping between BPMN and CACAO. A key
+                    consideration is that, in some cases, the mappings are not one-to-one, as some CACAO constructs can
+                    be modeled in several ways in BPMN. Thus, a degree of complexity manifests when converting a CACAO
+                    playbook to BPMN rather than the opposite. Another concern is that using Sub-Processes to solve the
+                    CACAO construct translation/conversion case mentioned above creates another case, meaning we need
+                    several different types of Sub-Processes that will share the common metadata of CACAO Workflow
+                    Steps. However, the object-specific (unique) properties will differ. A Parallel Step needs to
+                    understand specific properties pertinent to the Parallel Conditional Step, whereas, e.g., the Switch
+                    Condition Step needs other specific properties for its logical functions. The above intricacies
+                    complicate the creation of an explicit conversion mechanism between these specifications since the
+                    converter would need to look for several different patterns of groups of BPMN elements to map to one
+                    construct in CACAO.
+                </p>
+                <h4>Future work</h4>
+                <p>
+                    This research is the first step in introducing a modeling notation for CACAO playbooks. In this
+                    context, we examined whether we can utilize BPMN. Analyzing the mapping of constructs between the
+                    two standards and knowing the intricacies involved enables us to move toward developing software
+                    that can convert CACAO playbooks to BPMN workflows and the opposite. While developing the software,
+                    a key consideration must be restricting the amount of valid BPMN representations a CACAO construct
+                    can be represented, allowing the development of an MVP while efficiently managing development
+                    resources. Finally, to achieve a complete conversion, all the utilized BPMN constructs must be
+                    extended to accommodate all the metadata of CACAO.
+                </p>
 
-        <p>
-          <b>A post print version of the paper is available at: </b>
-          <a href="https://arxiv.org/pdf/2305.18928.pdf">https://arxiv.org/pdf/2305.18928.pdf</a><br/>
-          <b>You can also find a summarized version of this work on GitHub: </b>
-          <a href="https://github.com/cyentific-rni/bpmn-cacao">https://github.com/cyentific-rni/bpmn-cacao</a>
-        </p>
+                <p>
+                    <b>A post print version of the paper is available at: </b>
+                    <a href="https://arxiv.org/pdf/2305.18928.pdf">https://arxiv.org/pdf/2305.18928.pdf</a><br />
+                    <b>You can also find a summarized version of this work on GitHub: </b>
+                    <a href="https://github.com/cyentific-rni/bpmn-cacao"
+                        >https://github.com/cyentific-rni/bpmn-cacao</a
+                    >
+                </p>
 
-        <b>Resources</b>
-        <ol>
-          <li>I. L. et. al., “Enisa threat landscape 2022,” European Union Agency for Cybersecurity (ENISA), Tech. Rep., 2022.</li>
-          <li>European Parliament, “Directive (eu) 2016/1148 of the european parliament and of the council of 6 july 2016 concerning measures for a high common level of security of network and information systems across the union,” Official Journal of the European Union, Jul 2016.</li>
-          <li>European Parliament, “Directive (eu) 2022/2555 of the european parliament and of the council of 14 december 2022 on measures for a high common level of cybersecurity across the union, amending regulation (eu) no 910/2014 and directive (eu) 2018/1972, and repealing directive (eu) 2016/1148 (nis 2 directive),” [Online]. Available: https://eur-lex.europa.eu/legalcontent/EN/TXT/?uri=CELEX%3A32022L2555&qid=1678328167709, Dec 2022.</li>
-          <li>K. Fysarakis, V. Mavroeidis, M. Athanatos, G. Spanoudakis, and S. Ioannidis, “A blueprint for collaborative cybersecurity operations centres with capacity for shared situational awareness, coordinated response, and joint preparedness,” in 2022 IEEE International Conference on Big Data (Big Data). IEEE, 2022, pp. 2601–2609.</li>
-          <li>E. by Bret Jordan and A. Thomson, CACAO Security Playbooks Version 2.0, 2nd ed., [Online]. Available: https://docs.oasisopen.org/cacao/security-playbooks/v2.0/csd01/security-playbooksv2.0-csd01.html, OASIS Collaborative Automated Course Of Action Operations Technical Committee, Feb 2023.</li>
-          <li>Business Process Model and Notation Version 2.0, 2nd ed., [Online]. Available: https://www.omg.org/spec/BPMN/2.0/PDF, Object Management Group (OMG), Jan 2011.</li>
-          <li>OASIS, “Collaborative automated course of action operations (cacao) technical committee,” [Online] https://www.oasisopen.org/committees/cacao, Mar 2023.</li>
-          <li>V. Mavroeidis, P. Eis, M. Zadnik, M. Caselli, and B. Jordan, “On the integration of course of action playbooks into shareable cyber threat intelligence,” in 2021 IEEE International Conference on Big Data (Big Data). IEEE, 2021, pp. 2104–2108.</li>
-          <li>V. Mavroeidis and M. Zych, “Cybersecurity playbook sharing with stix 2.1,” arXiv preprint arXiv:2203.04136, 2022.</li>
-          <li>I. O. for Standardization/International Electrotechnical Commission et al., “Iso/iec 19510: 2013: Information technology–object management group business process model and notation,” 2013.</li>
-        </ol>
-      </div>
-    </div>
-  </section>
+                <b>Resources</b>
+                <ol>
+                    <li>
+                        I. L. et. al., “Enisa threat landscape 2022,” European Union Agency for Cybersecurity (ENISA),
+                        Tech. Rep., 2022.
+                    </li>
+                    <li>
+                        European Parliament, “Directive (eu) 2016/1148 of the european parliament and of the council of
+                        6 july 2016 concerning measures for a high common level of security of network and information
+                        systems across the union,” Official Journal of the European Union, Jul 2016.
+                    </li>
+                    <li>
+                        European Parliament, “Directive (eu) 2022/2555 of the european parliament and of the council of
+                        14 december 2022 on measures for a high common level of cybersecurity across the union, amending
+                        regulation (eu) no 910/2014 and directive (eu) 2018/1972, and repealing directive (eu) 2016/1148
+                        (nis 2 directive),” [Online]. Available:
+                        https://eur-lex.europa.eu/legalcontent/EN/TXT/?uri=CELEX%3A32022L2555&qid=1678328167709, Dec
+                        2022.
+                    </li>
+                    <li>
+                        K. Fysarakis, V. Mavroeidis, M. Athanatos, G. Spanoudakis, and S. Ioannidis, “A blueprint for
+                        collaborative cybersecurity operations centres with capacity for shared situational awareness,
+                        coordinated response, and joint preparedness,” in 2022 IEEE International Conference on Big Data
+                        (Big Data). IEEE, 2022, pp. 2601–2609.
+                    </li>
+                    <li>
+                        E. by Bret Jordan and A. Thomson, CACAO Security Playbooks Version 2.0, 2nd ed., [Online].
+                        Available:
+                        https://docs.oasisopen.org/cacao/security-playbooks/v2.0/csd01/security-playbooksv2.0-csd01.html,
+                        OASIS Collaborative Automated Course Of Action Operations Technical Committee, Feb 2023.
+                    </li>
+                    <li>
+                        Business Process Model and Notation Version 2.0, 2nd ed., [Online]. Available:
+                        https://www.omg.org/spec/BPMN/2.0/PDF, Object Management Group (OMG), Jan 2011.
+                    </li>
+                    <li>
+                        OASIS, “Collaborative automated course of action operations (cacao) technical committee,”
+                        [Online] https://www.oasisopen.org/committees/cacao, Mar 2023.
+                    </li>
+                    <li>
+                        V. Mavroeidis, P. Eis, M. Zadnik, M. Caselli, and B. Jordan, “On the integration of course of
+                        action playbooks into shareable cyber threat intelligence,” in 2021 IEEE International
+                        Conference on Big Data (Big Data). IEEE, 2021, pp. 2104–2108.
+                    </li>
+                    <li>
+                        V. Mavroeidis and M. Zych, “Cybersecurity playbook sharing with stix 2.1,” arXiv preprint
+                        arXiv:2203.04136, 2022.
+                    </li>
+                    <li>
+                        I. O. for Standardization/International Electrotechnical Commission et al., “Iso/iec 19510:
+                        2013: Information technology–object management group business process model and notation,” 2013.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
 </main>

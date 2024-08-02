@@ -13,7 +13,7 @@ permalink: /blogposts/blog19.html
                 <code>Author: UiO</code> <br />
             </div>
             <div class="col-sm-12">
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig1.png"
                         alt="Futuristic smart grid."
@@ -29,7 +29,7 @@ permalink: /blogposts/blog19.html
                 <p>AMI includes smart meters, communication networks, and data management systems. Smart meters, deployed in residential, commercial, and industrial settings, transmit consumption data to the AMI Headend, a central platform that collects, validates, and processes this data. This setup is crucial for tasks like load forecasting, outage management, and automated billing.</p>
                 <p>The communication between smart meters and the AMI Headend typically uses protocols like DLMS/COSEM over cellular networks (e.g., GPRS, 3G). This communication infrastructure ensures the accuracy and timeliness of electricity consumption data, which is essential for maintaining grid stability and optimizing energy distribution
                 </p>
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig2.png"
                         alt="Advanced Metering Infrastructure Communication. This figure depicts the components and communication flow within the AMI ecosystem, highlighting the role of smart meters and the AMI Headend in data collection and processing."
@@ -52,7 +52,7 @@ permalink: /blogposts/blog19.html
                 <p>The OASIS Collaborative Automated Course of Action Operations (CACAO) standard provides a common schema for developing interoperable, automatable, and shareable incident response playbooks. This standard enables organizations to create detailed, machine-readable playbooks that can be executed automatically, enhancing the speed and effectiveness of their incident response efforts.
                 </p>
                 <p>CACAO playbooks can be integrated with various cybersecurity tools, allowing for seamless orchestration and automation of incident response activities. This integration supports the execution of predefined actions, such as isolating infected systems, deploying patches, and generating incident reports.</p>
-                <div style="width: 50%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig3.png"
                         alt="CACAO Playbook Executed by the ROAR Component. This figure visually represents an example of a CACAO playbook, illustrating how automated responses are structured and executed."
@@ -68,7 +68,7 @@ permalink: /blogposts/blog19.html
                 </p>
                 <h4>Containment</h4>
                 <p>Once an incident is identified as a cyber-attack, containment procedures are initiated to isolate infected systems and prevent further propagation. This may involve reconfiguring network segments, updating firewall rules, and deploying hot standby devices to maintain service continuity. Automated containment actions can be executed through predefined playbooks, ensuring a swift and coordinated response.</p>
-                <div style="width: 80%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig4.png"
                         alt="Infected Host Isolation in a VLAN Through SDN Switch. This figure demonstrates how infected hosts were isolated in the network, providing a visual representation of the containment process."
@@ -89,7 +89,7 @@ permalink: /blogposts/blog19.html
                 <p>
                     To validate the proposed method, a realistic AMI testbed was established, including smart meters and an AMI Headend. The testbed was divided into different network segments to isolate critical systems and simulate real-world conditions. Two common cyber-attack scenarios were emulated: False Data Injection (FDI) and Distributed Denial of Service (DDoS) attacks.
                 </p>
-                <div style="width: 50%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig5.jpeg"
                         alt="AMI Testbed Architecture. This figure provides a clear understanding of the testbed environment used for validation."
@@ -101,7 +101,7 @@ permalink: /blogposts/blog19.html
                 <p>
                     Detection tools identified the attacks, triggering the execution of CACAO playbooks to automate containment and remediation actions. For instance, during an FDI attack, the system isolated compromised smart meters and reinstalled clean firmware. During a DDoS attack, load balancing and firewall updates mitigated the threat, ensuring continuous service availability.
                 </p>
-                <div style="width: 40%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig6.jpeg"
                         alt="Emulated FDI Attack in the Apparent Power. This figure illustrates the impact of the FDI attack on power measurements, showing the data anomalies caused by the attack."
@@ -109,7 +109,7 @@ permalink: /blogposts/blog19.html
                 </div>
                 <p><b>Figure 5:</b>Emulated FDI Attack in the Apparent Power. This figure illustrates the impact of the FDI attack on power measurements, showing the data anomalies caused by the attack.</p>
                 
-                <div style="width: 40%; margin-left: auto; margin-right: auto">
+                <div>
                     <img
                         src="{{ site.baseurl }}/assets/img/blog19-fig7.jpeg"
                         alt="Smart Meter DLMS/COSEM Messages During the DDoS Attack. This figure shows the increase in network messages during the DDoS attack, highlighting the detection and response process."
