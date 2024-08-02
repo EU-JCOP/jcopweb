@@ -16,7 +16,7 @@ permalink: /blogposts/blog4.html
         <p>
           The goal of the Action is to create a Joint Cybersecurity Operations Platform (JCOP) that is specifically designed to enhance the cyber capabilities of the EU Member State authorities, by providing assets regarding (i) Cyber Threat Intelligence (CTI), (ii) Incident Response and (iii) Cybersecurity Operations Training (COT). In addition, the Action's positive impact will be enhanced by extensive cross-border cooperation activities for cyber defense competence augmentation, which is essential for strengthening trust among the Member States. The delivered platform will promote and integrate concepts such as shared situational awareness, joint preparedness and coordinated incident response.
         </p>
-        <div>
+        <div >
           <img
           src="{{ site.baseurl }}/assets/img/jcop_diagram.png"
           alt="Overview of the JCOP pillars and their interplay."
@@ -54,7 +54,7 @@ permalink: /blogposts/blog4.html
           <li>HoneyChart<sup>2</sup>: a platform dedicated to the creation and the deployment of honeypots utilizing HelmCharts and Kubernetes. Honeypots are a special type of software that can lure and lead astray attackers, thereby revealing their presence and tactics. All traffic directed to a Honeypot service is considered malicious, since such traffic can not originate from legitimate users. Honeypots usually take the form of websites, but they can also be files, e-mails and databases, or other services sitting on open ports. Initially their goal was to detect worms, which blindly attack the whole address space, but since worm attacks have dissipated over the years, Honeypots are now used to detect worm-able attacks, like BlueKeep<sup>3</sup>, or provide useful insights for protecting Industrial Control Systems (ICS) and their supervisory control and data acquisition (SCADA) components. In the tool adopted by JCOP, a web interface for generating Helm Charts of containerized honeypots is presented (Figure 2). The front-end part was created using HTML, CSS, Javascript, and the back-end with Node.js. HoneyChart provides a selection of low and high interaction honeypots. Its users are provided with two main options, the ability to create (a) custom honeypots and (b) honeypots based on pre-built templates, exposing specific interfaces. Regarding the first option the honeypot images that are provided are the Dionaea, Conpot and Cowrie honeypot. The users can create custom Helm Charts and configure the selected honeypot images based on their requirements and preferences. As to the second option, the users are allowed to select pre-built Helm Charts that can simulate different protocols, e.g. the Microsoft Windows protocols.</li>
         </ul>
 
-        <div>
+        <div >
           <img
           src="{{ site.baseurl }}/assets/img/blog4-figure2.png"
           alt="HoneyChart web tool interface."
@@ -63,7 +63,7 @@ permalink: /blogposts/blog4.html
         </div>
         <p><b>Figure 2:</b> HoneyChart web tool interface.</p>
 
-        <div>
+        <div >
           <img
           src="{{ site.baseurl }}/assets/img/blog4-figure3.png"
           alt="Honeypots' generation process in HoneyChart."
@@ -76,7 +76,7 @@ permalink: /blogposts/blog4.html
           <li>GPU accelerated Snort, which is an intrusion detection system (IDS). Snor<sup>4</sup> is an open-source tool that can detect intrusions by packet inspection and payload analysis, based on preconfigured rulesets. Typically an IDS is placed as a switch (Figure 4), between the host(s) and incoming packet traffic. Snort also provides a mode that can be set as an intrusion prevention system (IPS), which then directly controls the packet traffic, rather than simply making observations and alerts. It can be very easily configured by specifying certain rules that overwatch ports or IP addresses which the user wants to be alerted about, by detecting certain string patterns that may appear in the payload section of a packet, and many more functionalities. Since it is an open-source tool, there are plenty of community-created rules available. As an additional contribution, TUC provides an enhancement to Snort with a Deep Packet Inspection (DPI) tool<sup>5</sup> (Figure 5), which transfers the packets to the GPU, implements the Aho-Corasick multi-pattern matching algorithm for string searching on the GPU and transfers the results back to the CPU. By using GPU resources it achieves parallel and faster computation. The GPU porting of the matching algorithm is written in OpenCL language.</li>
         </ul>
 
-        <div>
+        <div >
           <img
           src="{{ site.baseurl }}/assets/img/blog4-figure4.png"
           alt="Typical Snort deployment."
@@ -85,7 +85,7 @@ permalink: /blogposts/blog4.html
         </div>
         <b>Figure 4:</b> Typical Snort deployment. SNORT as an IDS system performs: monitoring and detection, analyze traffic, alerts and notifications, aiding post incident investigation through logging</p>
 
-        <div>
+        <div >
           <img
           src="{{ site.baseurl }}/assets/img/blog4-figure5.png"
           alt="Deterministic Finite Automaton."

@@ -78,11 +78,13 @@ footer > section {
 .responsive-img-50vh {
     width: 50vw;
     height: auto;
+    max-width: -webkit-fill-available;
 }
 
 .responsive-img-30vh {
     width: 30vw;
     height: auto;
+    max-width: -webkit-fill-available;
 }
 
 .center-img {
