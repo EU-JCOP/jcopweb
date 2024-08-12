@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog Post
-pageHeading: OASIS CACAO v2.0 standard is released
+pageHeading: The Art and Science of Visualization for Enhanced Situational Awareness
 permalink: /blogposts/blog10.html
 ---
 
@@ -10,182 +10,61 @@ permalink: /blogposts/blog10.html
         <div class="container">
             <div class="section-title">
                 <h2>{{ page.pageHeading }}</h2>
-                <code>Author:  Bret Jordan, Vasileios Mavroeidis (UiO), Luca Morgese, and Allan Thomson</code> <br />
+                <code>Author: TUBS</code> <br />
             </div>
             <div class="col-sm-12">
                 <div>
                     <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig1.png"
-                        alt="CACAO Logo"
+                        src="{{ site.baseurl }}/assets/img/blog16-fig1.jpeg"
+                        alt="Dashboard with graphs."
                         class="responsive-img-80vh" />
                 </div>
-                <h3>Introduction</h3>
                 <p>
-                    Organizational cyber security has never been more under attack than in today's world. With the introduction of the OASIS Collaborative Automated Course of Actions Operations (CACAO) Version 2.0 standard, security organizations have a new and formidable toolkit in their ability to orchestrate and collaborate using fully automatable security playbooks to respond to today's cyber threats. 
+                    Welcome to a comprehensive exploration of how visualization serves as a key catalyst in augmenting situational awareness. In this three-part series, we embark on a journey to unravel the symbiotic relationship between visualization and situational awareness, shedding light on how visual representation transforms complex data into actionable insights. From interactive dashboards to geospatial mapping, we will delve into how these techniques offer a visual narrative that empowers individuals and organizations to stay vigilant and proactive in dynamic environments.
                 </p>
-                <p>
-                    Read on to learn more about how CACAO can help defend your organization better.
-                </p>
-                <h3>The New Standard for Security Playbooks</h3>
-                <p>
-                    CACAO is a standardized framework for orchestrating and automating course-of-action playbooks in cybersecurity. It streamlines the creation, execution, and sharing of playbooks, making it easier for security teams to respond to incidents, mitigate threats, and protect their networks. CACAO offers a modular and extensible approach to playbook development, ensuring that it can adapt to the diverse needs of different organizations.
-                </p>
-                <p>
-                    CACAO focuses on empowering IT/Security organizations to design and orchestrate security activities. These range from traditional activities like intrusion detection; through security event triage, to determining relevant steps to counter a threat; and enforce mitigation and incident response procedures.
-                </p>
-                <p>
-                    Moreover, it enables more advanced techniques that use playbooks across various use cases that organizations may employ or want to address, such as performing attack emulations as part of red team activities, utilizing threat deception techniques to engage with active threats against the organization, or even ensuring policy and regulatory compliance.
-                </p>
-                <p>
-                    The following section highlights some of the key aspects of how CACAO Playbooks are designed.
-                </p>
-                <h3>
-                    Key Technology of CACAO
-                </h3>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig2.jpeg"
-                        alt="Key components of CACAO."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 1:</b> Key components of CACAO. </p>
-
-                <h4>Organizing and Searching Playbooks: Metadata</h4>
-                <p>
-                    Metadata is a crucial and powerful component of CACAO, allowing for the efficient categorization and searchability of playbooks. It includes information such as the operational roles a playbook performs, descriptions of its activities, and the complexity of workflow steps encapsulated. For example, a playbook may contain workflow steps that are simple sequencing or they may contain control flows that require the orchestration system to handle the typical logic that programs require. This metadata helps organizations find relevant playbooks quickly and accordingly tailor them to their specific requirements.
-                </p>
-                <h4>Defining the process, logic and knowledge within a playbook: Workflow Steps</h4>
-                <p>
-                    CACAO playbooks are structured as workflows, composed of a dictionary of action steps to be performed sequentially or in parallel while also staying flexible, allowing branching with other CACAO playbooks (modular approach), and incorporating different types of conditional logic (e.g., if, while, switch) to support even the most advanced and complex scenarios and requirements.
-                </p>
-                <h4>
-                    Connecting the playbook steps to systems, people and their targets: Agents and Targets
-                </h4>
-                <p>
-                    In CACAO, the agent is the entity responsible for executing actions, while the target is the recipient of those actions. Agents execute action steps containing commands against targets. The design emphasizes modularity and reusability, allowing organizations to define agents and targets once, reference them in multiple playbooks, or reuse them within a playbook. This approach provides flexibility on how action steps and their underlying commands will be executed by, or against, for example, an individual, group, organization, devices and equipment, or in a hybrid manner.
-                </p>
-                <h3>
-                    Additional Key Features of CACAO
-                </h3>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig3.png"
-                        alt="1. Modularity & Extensibility."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 2:</b> 1. Modularity & Extensibility. </p>
-                <p>
-                    1. Recognizing that cybersecurity organizations and their technologies can span a large ecosystem that is constantly evolving, CACAO was designed to be both modular and extensible. 
-                </p>
-                <p>
-                    Organizations can be responsible for specific areas of technology and their respective playbooks. Those playbooks can be combined with other organization's playbooks for specific threats or general process implementation that larger organizations typically follow when responding to incidents (also known as standard operating procedures - SOPs). In many respects how the IT/Security organization is defined and operating is set; however, CACAO playbooks can be easily mapped to that organizational fit, without requiring changes to the organization or how they perform their automation. With CACAO, organizations now have standardized and fully interoperable playbooks that can provide significant improvements to their operational processes within the organization and externally if the team is collaborating with other organizations.
-                </p>
-                <p>
-                    CACAO already includes a comprehensive set of integrations for a large variety of commands and toolsets*. However, organizations can also adapt CACAO to incorporate new tools, proprietary systems, or evolving industry standards. We defined an extension mechanism that is now the basis for <a href="https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.pdf">STIX</a> and CACAO Extensions that can be applied at the playbook, step, or command level, providing flexibility for organizations to customize their orchestration.
-                </p>
-                <p>
-                    * See <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.html#_Toc152256488">CACAO Specification Section 5</a> for details.
-                </p>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig4.png"
-                        alt="2. Ensuring Playbook Integrity."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 3:</b> 2. Ensuring Playbook Integrity. </p>
-
-                <p>
-                    2. Integrity and trust are essential in the world of cybersecurity. CACAO addresses this need by incorporating digital signatures into playbooks to support the ability for them to be signed and countersigned. CACAO's signature mechanism (<a href="https://www.itu.int/rec/T-REC-X.590-202310-P">JSON signature scheme</a>), has been submitted to the UN's ITU-T, which was standardized as <a href="https://www.itu.int/rec/T-REC-X.590-202310-P">X.590</a>. It is now being used in CACAO, assuring authenticity and ensuring integrity across playbooks and helping organizations validate their sources and track changes to playbooks over time.
-                </p>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig5.png"
-                        alt="3. Integrating Cyber Threat Intelligence (CTI) with Orchestration."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 4:</b> 3. Integrating Cyber Threat Intelligence (CTI) with Orchestration. </p>
-
-                <p>
-                    3. CACAO connects with the Structured Threat Information eXpression (STIX) Version 2.1 standard, ensuring interoperability and information sharing between cyber threat intelligence and incident response. CACAO uses the same identifiers, versioning mechanism, and core metadata as STIX, enabling organization investments to support both standards easily. This integration allows organizations to leverage their cyber threat intelligence knowledge and apply it directly to their playbooks. Similarly, the synergistic utilization of these two standards can allow CTI to trigger or recommend the execution of specific CACAO playbooks.
-                </p>
-                <h3>
-                    Designing CACAO Playbooks - Key Elements to Consider
-                </h3>
-                <p>
-                    As highlighted above, there are three key aspects to designing a CACAO Playbook that an organization must consider. 
-                </p>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig6.jpeg"
-                        alt="CACAO Playbook Metadata."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 5:</b> CACAO Playbook Metadata. </p>
-
-                <p>
-                    Metadata enables organizations to assess and evaluate the contents of a playbook and what its operational impact might be. The key parts and some of the properties to consider are:
-                </p>
-                <ul>
-                    <li>
-                        <b>Playbook Type:</b> This property defines the key purpose of the playbook, for example, does it address, threat detection, incident response, threat mitigation, investigation, a combination of the aforementioned, etc.</li>
-                    <li>
-                        Playbook Activities & Playbook Processing: These properties enable organizations to better understand what a playbook does in detail and what features it has implemented such as conditional logic, digital signatures, etc.</li>
-                    <li>
-                        <b>Versioning:</b>Versioning enables organizations to track changes in their playbooks over time and potentially changes in playbooks created by different authors.</li>
-                    <li>
-                        Labels: Labels can be used to index and categorize playbooks by type, organization, and function while enabling many other organizational and trust group specific vocabularies or taxonomies. Labeling can be extremely powerful and effective when organizing playbooks.
-                    </li>
-                </ul>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig7.jpeg"
-                        alt="CACAO Workflow Steps."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 6:</b> CACAO Workflow Steps. </p>
-
-                <p>
-                    Workflow Steps are the primary content that defines the playbook and the outcomes expected by executing the steps within it. CACAO provides a rich set of (programming) constructs, offering organizations a great amount of flexibility and comprehensive support for their operational and automation needs.
-                </p>
-                <p>
-                    Steps may include: 
-                </p>
-                <ul>
-                    <li>Sequential: Each step is executed in a simple defined order: step 1, step 2, step 3, step n</li>
-                    <li>Parallel: Each step is executed in parallel: step 1.1, step 1.2, step 1.3, step 1.n
-                    </li>
-                    <li>Conditional: Each step can consider a boolean expression prior to executing the next step, for example, if Condition X is true, then perform step 1.</li>
-                    <li>Loops: Supports repeating steps until a condition is not satisfied, for example, while Condition X is true, then perform step 1.</li>
-                    <li>Action: Supports the specific action to be executed for a given step.</li>
-                </ul>
-                <div>
-                    <img
-                        src="{{ site.baseurl }}/assets/img/blog10-fig8.jpeg"
-                        alt="CACAO Agents & Targets."
-                        class="responsive-img-80vh" />
-                </div>
-                <p><b>Figure 7:</b> CACAO Agents & Targets. </p>
-
-                <p>Two simple examples:</p>
-                <ul>
-                    <li>An agent could be an orchestration system executing an automated command (e.g., HTTP API call) to configure a firewall (in this case - the target).</li>
-                    <li>A human agent executing a manual step (manual command), such as switching off the power to a building's internet connection, which requires network isolation and is impossible to automate without a human override.</li>
-                </ul>
-                <h3>Conclusion</h3>
-                <p>
-                    CACAO provides organizations with a rich set of mechanisms to define security playbooks across their entire organization to handle many different aspects of the security operations lifecycle. For collaborating teams within the organizations or across different organizations, CACAO enables the teams to define and share their defensive tradecraft on many aspects including incidents, threat responses, investigative actions, and security assessments. 
-                </p>
-                <p>
-                    Please check out the CACAO specification <a href="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/cs01/security-playbooks-v2.0-cs01.html">here</a> and check back in the coming months for our webinar series on CACAO.
-                </p>
-                <h3>
-                    References
-                </h3>
+                <h3>Understanding Situational Awareness</h3>
+                <p>Situational awareness goes beyond mere perception; it is a dynamic cognitive state that enables individuals to comprehend, interpret, and project information about their environment. Visualization becomes the bridge between raw data and human cognition, enhancing situational awareness by presenting information in a format that aligns with the natural processing capabilities of the human brain.</p>
+                <p>At its core, situational awareness involves the continuous gathering of information, the comprehension of that information, and the projection of its future state. Visualization acts as a force multiplier in this process, facilitating the rapid comprehension of complex scenarios, enabling quicker decision-making, and ultimately enhancing the ability to predict and respond effectively to changing situations.</p>
+                <h3>The Power of Visual Representation and Benefits in Situational Awareness</h3>
+                <p>The human brain is inherently wired for visual processing, making visualization a powerful tool for conveying information. This segment explores how visual representation enhances comprehension, allowing individuals to grasp intricate relationships, patterns, and anomalies that might be obscured in traditional text-based reports.</p>
+                <p>Visualization leverages the brain's natural affinity for images, providing a more intuitive and immediate understanding of information. Whether through charts, graphs, or interactive dashboards, visual representation transforms data into a visual narrative, enabling users to discern patterns, trends, and outliers with greater speed and accuracy.</p>
+                <p>An intuitive representation of information offers the following core benefits:</p>
                 <ol>
-                    <li>
-                        <a href="https://www.oasis-open.org/2023/12/06/cacao-security-playbooks-v2-blog/">https://www.oasis-open.org/2023/12/06/cacao-security-playbooks-v2-blog/</a>
-                    </li>
+                    <li><b>Rapid Comprehension:</b> Visualizations facilitate quick understanding, crucial in dynamic and time-sensitive situations. From real-time dashboards to interactive maps, the ability to absorb information at a glance is a hallmark of enhanced situational awareness.</li>
+                    <li><b>Pattern Recognition:</b> Visual representations excel at aiding pattern recognition, allowing users to discern trends, anomalies, and correlations effortlessly. Whether it is identifying unusual activity in network traffic or recognizing trends in market data, visualization accelerates pattern recognition.</li>
+                    <li><b>Decision Support:</b> Visualization provides a visual context for decision-making, offering decision-makers a comprehensive view of the situation. Interactive visualizations empower users to explore data, assess alternative scenarios, and make informed decisions in the face of uncertainty.</li>
                 </ol>
+                <p>
+                    The benefits of visualization in situational awareness extend across various domains, from crisis management and emergency response to business operations and military strategy. An interactive and modular dashboard is a universal solution that can be configured to cover multiple areas.
+                </p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog16-fig2.png"
+                        alt="Data visualization."
+                        class="responsive-img-80vh" />
+                </div>
+                <h3>Interactive Dashboards</h3>
+                <p>Dynamic dashboards serve as a central command center for situational awareness, consolidating diverse data into a unified, interactive view. We will explore how platforms like Tableau and Power BI enable the creation of dashboards that allow users to monitor real-time information, track incidents, and explore data in a user-centric manner.</p>
+                <p>Interactive dashboards provide decision-makers with the flexibility to customize their view, focusing on key metrics and data points relevant to their specific roles. Whether it is monitoring stock market trends, tracking social media sentiment during a crisis, or overseeing logistics in real-time, interactive dashboards offer a comprehensive and customizable visual interface.</p>
+                <h3>Geospatial Mapping</h3>
+                <p>Geospatial visualization takes center stage as we explore the world of mapping and spatial analytics. Mapping data onto geographical representations provides a spatial context, helping users identify trends, hotspots, and correlations that are location-dependent.
+                </p>
+                <p>Geospatial mapping is particularly valuable in scenarios where location plays a critical role, such as disaster response, supply chain management, or monitoring the spread of infectious diseases. By visualizing data on a map, users can quickly understand the geographic distribution of events, resources, or incidents, enabling more effective decision-making based on spatial relationships.</p>
+                <h3>Network Visualization
+                </h3>
+                <p>In the interconnected world, understanding relationships is paramount. Network visualization tools, such as Gephi, aid in unraveling complex relationships within datasets, providing insights into the structure of networks, connections, and dependencies.</p>
+                <p>Network visualization is instrumental in domains like cybersecurity, where understanding the relationships between entities can unveil potential threats. Whether visualizing the connections between devices in an IT infrastructure or understanding social networks, network visualization enhances situational awareness by revealing hidden patterns and potential points of vulnerability.</p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog16-fig3.png"
+                        alt="Timeseries visualization."
+                        class="responsive-img-80vh" />
+                </div>
+                <h3>Temporal Analysis</h3>
+                <p>Situations evolve over time, and temporal analysis visualizations, including timelines and trend graphs, offer a historical perspective. We will explore how these visualizations assist in identifying patterns, predicting future trends, and understanding the dynamics of changing situations.</p>
+                <p>Timelines provide a chronological view of events, aiding in the understanding of the sequence of actions and the evolution of situations. Trend graphs, on the other hand, reveal changes in data over time, allowing users to identify trends, anomalies, and potential future developments.</p>
+                <p>Part 2 will transition from visualization techniques to real-world applications, showcasing how visualization enhances situational awareness in practical scenarios.
+                </p>
         </div>
     </section>
 </main>
