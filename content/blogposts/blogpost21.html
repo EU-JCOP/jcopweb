@@ -1,0 +1,140 @@
+---
+layout: page
+title: Blog Post
+pageHeading: Real-world Applications of Visualization in Situational Awareness I
+permalink: /blogposts/blog21.html
+---
+
+<main id="main">
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>{{ page.pageHeading }}</h2>
+                <code>Author: TUBS</code> <br />
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    In today's rapidly evolving cyber threat landscape, organizations are increasingly adopting
+                    proactive measures to bolster their cybersecurity defenses. A prominent method is cyber threat
+                    hunting, which actively seeks out signs of malicious activity within an organization's network.
+                    Unlike traditional security measures that rely on automated systems to flag potential threats, cyber
+                    threat hunting is an iterative and proactive process that aims to identify and mitigate advanced
+                    threats that may otherwise go undetected.
+                </p>
+                <p>
+                    This blog post delves into the Forensic Visualization Toolkit (FVT), a powerful tool designed to
+                    enhance digital forensics investigations, analyze digital evidence, and provide advanced
+                    visualizations to improve cybersecurity situational awareness. Developed by Jihane Najar, Marinos
+                    Tsantekidis, Aris Sotiropoulos, and Vassilis Prevelakis, FVT is positioned as an essential asset for
+                    cybersecurity professionals, offering intuitive and interactive tools that significantly amplify
+                    their capabilities to identify, analyze, and respond to threats.
+                </p>
+
+                <h3>Introduction to Cyber Threat Hunting and Visualization</h3>
+                <p>
+                    Cyber threat hunting is a critical practice within the digital landscape, where organizations strive
+                    to protect their assets and sensitive information against a growing array of cyber threats, from
+                    sophisticated nation-state actors to opportunistic hackers. As the volume and complexity of cyber
+                    threats escalate, innovative approaches to threat detection become paramount. Visualization plays a
+                    vital role in this process, transforming complex data into actionable insights and revealing
+                    patterns, anomalies, and correlations that might otherwise remain hidden within raw data.
+                </p>
+                <h3>The Forensic Visualization Toolkit (FVT)</h3>
+                <p>
+                    FVT is introduced as a novel tool for cyber threat hunting that leverages visual analytics to
+                    enhance the efficiency and effectiveness of threat identification. By integrating data from various
+                    sources and employing cutting-edge visualization techniques alongside advanced data analytics, FVT
+                    empowers security analysts with tools to make informed decisions and gain a comprehensive
+                    perspective on cybersecurity issues.
+                </p>
+                <h4>Key Features of FVT</h4>
+                <ol>
+                    <li>
+                        <b>Intuitive and Detailed Visualizations:</b> FVT offers real-time visualizations that are
+                        intuitive and detailed, enabling the simultaneous use of multiple views of the same data. This
+                        feature sets it apart from traditional visualization tools, which are often vertically
+                        integrated and less flexible.
+                    </li>
+                    <li>
+                        <b>Customized Implementation for Critical Infrastructure Forensics Analysis:</b> Designed to
+                        adapt to the unique challenges of critical infrastructure environments, FVT allows organizations
+                        to tailor forensic services to their specific needs. This includes gathering effective data for
+                        post-incident analysis and integrating this analysis into a defense-in-depth strategy.
+                    </li>
+                    <li>
+                        <b>Innovative Forensics Services:</b> FVT introduces timeline analysis, preconfigured views, and
+                        best practices to facilitate a deep dive into the sequence of events leading up to a security
+                        incident. Preconfigured views automatically adapt based on past situations, streamlining the
+                        analysis process.
+                    </li>
+                </ol>
+                <h4>Architecture and Implementation</h4>
+                <p>
+                    FVT's frontend is based on the Angular.io framework, combined with various visualization libraries
+                    to cover specific data analysis needs. It can operate with its own storage facility, primarily the
+                    Elasticsearch engine, or use multiple other data sources. This flexibility is made possible through
+                    tailor-made converters that request data from respective sources and transform it for visualization.
+                </p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog21-fig1.png"
+                        alt="FVT Internal Architecture"
+                        class="responsive-img-80vh" />
+                </div>
+                <p><b>Figure 1:</b> FVT Internal Architecture.</p>
+                <p>
+                    FVT supports multiple deployment modes, including standalone applications with moderate requirements
+                    and containerized applications using Docker. This flexibility makes it easily integrable into
+                    existing environments.
+                </p>
+                <h3>Real-life Deployment and Use Cases</h3>
+                <p>
+                    FVT has been deployed in various EU-funded research projects, demonstrating its capability to
+                    enhance cybersecurity operations. For example, in the JCOP project, the FVT dashboard has been
+                    configured to illustrate information ingested from the OpenCTI platform, allowing users to grasp the
+                    volume of entries across various categories and investigate data points indicating the presence of
+                    cyber threats.
+                </p>
+                <h4>FVT Timeline Analysis</h4>
+                <p>
+                    In the HEIR project, FVT has been adapted to provide intuitive visualizations and forensic analysis
+                    within the healthcare sector. It helps identify possible threats by processing and combining large
+                    volumes of heterogeneous data, providing real-time and post-mortem forensic analysis.
+                </p>
+                <div>
+                    <img
+                        src="{{ site.baseurl }}/assets/img/blog21-fig2.png"
+                        alt="FVT TImeline Analysis"
+                        class="responsive-img-80vh" />
+                </div>
+                <p><b>Figure 2:</b> FVT Timeline Analysis.</p>
+                <h3>Conclusion</h3>
+                <p>
+                    FVT represents a multifaceted solution combining data analytics, advanced visualizations, and
+                    real-time threat mitigation. Its adaptability to various scenarios, from network monitoring to
+                    forensic data analysis, showcases its versatility in the ever-evolving field of cybersecurity. By
+                    providing an intuitive and interactive interface, FVT empowers organizations to stay ahead of cyber
+                    threats and safeguard their digital assets effectively.
+                </p>
+                <p>
+                    FVT does not aim to replace existing security components but rather to serve as an umbrella,
+                    aggregating information from various sources into a single, intuitive dashboard. Future work will
+                    focus on conducting a comprehensive comparative analysis to assess FVT's performance against similar
+                    tools, ensuring it remains an intuitive and efficient tool for cybersecurity professionals.
+                </p>
+                <h3>References</h3>
+                <p>
+                    This blog post is based on:
+                    <i
+                        >J. Najar, M. Tsantekidis, A. Sotiropoulos and V. Prevelakis, "Enhancing Cyber Threat Hunting: A
+                        Visual Approach with the Forensic Visualization Toolkit," 2023 IEEE International Conference on
+                        Big Data (BigData), Sorrento, Italy, 2023, pp. 3035-3042, doi:
+                        10.1109/BigData59044.2023.10386677. keywords: {Visualization;Data analysis;Digital
+                        forensics;Data visualization;Organizations;User experience;Computer security;cyber
+                        security;visualization;cyber threat hunting;Forensic Visualization Toolkit},
+                    </i>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
